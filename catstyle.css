@@ -1,0 +1,87 @@
+.site-header {
+    background-color: #fff;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  .logo-container img.catcafelogo {
+    top: 10px;
+    width: 150px;
+    height: auto;
+  }
+  
+  .logo-container {
+    position: relative;
+  
+  }
+  
+  .header-nav .shoppingcart,
+  .header-nav .profile {
+    position: absolute;
+    top: 20px;
+    width: 40px;
+    height: auto;
+  }
+  
+  .header-nav .shoppingcart {
+    right: 58px; 
+  }
+  
+  .header-nav .profile {
+    right: 30px; 
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 900px;
+    margin: 20px auto 0;
+    padding: 0 20px;
+    font-family: 'Jua', sans-serif; 
+    font-size: 15px;                
+    font-weight: normal;            
+    text-transform: uppercase;      
+  }
+  
+  .navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+  }
+  
+  .navbar a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+  }
+  
+  .navbar a.active {
+    border-bottom: 1.5px solid #000000;
+    padding-bottom: 3px;
+  }
+  
+  .search {
+    display: flex;
+    align-items: center;
+  }
+  
+  .searchicon {
+    width: 40px;
+    height: auto;
+    position: relative;
+    top: -11px;
+  }
+  
+  .site-body {
+    text-align: center;
+    padding: 40px 0;
+  }
+  
+  .wcc {
+    width: 711px;
+    height: auto;
+  }
+  
+  
+  
