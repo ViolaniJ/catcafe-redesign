@@ -191,6 +191,17 @@ main {
     font-size: 20px;
 }
 
+.orange-cat {
+    width: 200px;
+    height: auto;
+    margin-top: 30px;
+}
+
+.cat-tagline p {
+    font-family: 'Jua', sans-serif;
+    font-size: 30px;
+}
+
 /* --------------- end of main section: HOMEPAGE --------------- */
 
 /* --------------- footer information: HOMEPAGE --------------- */
