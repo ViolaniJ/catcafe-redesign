@@ -1,3 +1,14 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
 .site-header {
     background-color: #fff;
     text-align: center;
@@ -124,9 +135,16 @@
     margin-top: 50px;
 }
 
-.cats img {
+.kitty img {
     width: 150px;
     height: auto;
+}
+
+.kitty p {
+    margin: 0;
+    font-family: 'Jua', sans-serif;
+    font-size: 20px;
+    top: -40px;
 }
 
 .next {
@@ -137,7 +155,7 @@
 }
 
 .site-footer {
-    background-color: #E5E7CE; /* light pastel beige */
+    background-color: #E5E7CE; 
     padding: 30px 20px;
     font-family: 'Jua', sans-serif;
     font-size: 13px;
@@ -147,11 +165,19 @@
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: left;
+    gap: 10px;
     align-items: center;
     flex-wrap: wrap;
 }
-  
+
+.footer-links {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
 .footer-links {
     display: flex;
     gap: 30px;
@@ -160,23 +186,29 @@
   
 .footer-links a {
     text-decoration: none;
-    color: #4a4a4a;
+    color: #968D8D;
 }
   
 .footer-social {
     display: flex;
     align-items: center;
     gap: 15px;
+    justify-content: flex-end;
     flex-wrap: wrap;
 }
   
 .footer-social span {
-    color: #4a4a4a;
+    color: #968D8D;
 }
   
 .social-icons img {
     width: 20px;
     height: auto;
     margin-left: 10px;
+}
+
+.Pinterest img {
+    width: 100px;
+    height: auto;
 }
   
