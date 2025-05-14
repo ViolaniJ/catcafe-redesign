@@ -9,8 +9,7 @@ main {
     flex: 1;
 }
 
-/* --------------- HOMEPAGE.HTML FILE --------------- */
-/* --------------- header information: HOMEPAGE --------------- */
+/* --------------- HEADER INFORMATION IS FOR ALL PAGES --------------- */
 .site-header {
     background-color: #fff;
     text-align: center;
@@ -79,8 +78,60 @@ main {
     position: relative;
     top: -11px;
 }
-/* --------------- end of header section: HOMEPAGE --------------- */
+/* --------------- END OF HEADER SECTION --------------- */
+/* --------------- FOOTER INFORMATION IS FOR ALL PAGES --------------- */
+.site-footer {
+    background-color: #E5E7CE; 
+    padding: 10px 20px;
+    font-family: 'Jua', sans-serif;
+    font-size: 13px;
+}
+  
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
 
+.footer-links {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+  
+.footer-links a {
+    text-decoration: none;
+    color: #968D8D;
+    font-size: 14px;
+}
+  
+.footer-social {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+  
+.footer-social p {
+    color: #968D8D;
+    font-size: 15px;
+}
+  
+.social-icons img {
+    width: 30px;
+    height: auto;
+    margin-left: 10px;
+}
+
+/* --------------- END OF FOOTER SECTION --------------- */
+
+
+/* --------------- HOMEPAGE.HTML FILE --------------- */
 /* --------------- main information: HOMEPAGE --------------- */
 .site-body {
     text-align: center;
@@ -224,55 +275,31 @@ main {
 }
 
 /* --------------- end of main section: HOMEPAGE --------------- */
-
-/* --------------- footer information: HOMEPAGE --------------- */
-.site-footer {
-    background-color: #E5E7CE; 
-    padding: 10px 20px;
-    font-family: 'Jua', sans-serif;
-    font-size: 13px;
-}
-  
-.footer-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-.footer-links {
-    display: flex;
-    gap: 30px;
-    flex-wrap: wrap;
-}
-  
-.footer-links a {
-    text-decoration: none;
-    color: #968D8D;
-    font-size: 14px;
-}
-  
-.footer-social {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    justify-content: flex-end;
-    flex-wrap: wrap;
-}
-  
-.footer-social p {
-    color: #968D8D;
-    font-size: 15px;
-}
-  
-.social-icons img {
-    width: 30px;
-    height: auto;
-    margin-left: 10px;
-}
-
-/* --------------- end of footer section: HOMEPAGE --------------- */
 /* --------------- THE END OF HOMEPAGE.HTML FILE --------------- */
+
+/* --------------- BOOKAVISIT.HTML FILE --------------- */
+/* --------------- main information: BOOK A VISIT --------------- */
+.book-a-visit {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.book-a-visit h1 {
+    font-size: 64px;
+    font-family: 'Jua', sans-serif;
+    margin-bottom: 10px;
+}
+
+.book-a-visit img {
+    width: 62px;
+    height: auto;
+}
+
+.book-a-visit p {
+    font-size: 32px;
+    font-family: 'Jua', sans-serif;
+    margin-bottom: 40px;
+}
+
+
+/* --------------- THE END OF BOOKAVISIT.HTML FILE --------------- */
