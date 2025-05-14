@@ -9,11 +9,12 @@ main {
     flex: 1;
 }
 
+/* --------------- HOMEPAGE.HTML FILE --------------- */
 /* --------------- header information: HOMEPAGE --------------- */
 .site-header {
     background-color: #fff;
     text-align: center;
-    padding: 10px;
+    padding: 0px;
 }
   
 .logo-container img.catcafelogo {
@@ -90,14 +91,39 @@ main {
     display: flex;
     justify-content: center;   
     align-items: center;       
-    margin-top: 0px;       
+    margin-top: -20px;   
+    gap: 10px;    
+}
+
+.welcome-banner {
+    position: relative;
+    display: inline-block;
 }
 
 .welcomecat {
     width: 711px;
     height: auto;
     position: relative;
-    top: -20px; 
+    top: -20px;
+}
+
+.visit-btn {
+    position: absolute;
+    bottom: 50px;      /* adjust this to position vertically */
+    right: 60px;       /* adjust this to position horizontally */
+    background-color: #C0865A;
+    color: white;
+    font-family: 'Jua', sans-serif;
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 14px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+  
+.visit-btn:hover {
+    background-color: #C0865A;
 }
 
 .next {
@@ -249,3 +275,4 @@ main {
 }
 
 /* --------------- end of footer section: HOMEPAGE --------------- */
+/* --------------- THE END OF HOMEPAGE.HTML FILE --------------- */
