@@ -9,6 +9,15 @@ main {
     flex: 1;
 }
 
+body {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+  
+body.fade-in {
+    opacity: 1;
+}
+
 /* --------------- HEADER INFORMATION IS FOR ALL PAGES --------------- */
 .site-header {
     background-color: #fff;
@@ -299,6 +308,47 @@ main {
     font-size: 32px;
     font-family: 'Jua', sans-serif;
     margin-bottom: 40px;
+}
+
+.visit-options {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 50px;
+}
+  
+.visit-option {
+    background-color: #108645;
+    border-radius: 20px;
+    width: 200px;
+    height: 200px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease;
+    cursor: pointer;
+}
+  
+.visit-option:hover {
+    transform: translateY(-5px);
+}
+  
+.visit-option img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 15px;
+}
+  
+.visit-option p {
+    color: #FFFF66;
+    font-size: 24px;
+    margin: 0;
+    text-align: center;
+    line-height: 1.3;
 }
 
 
