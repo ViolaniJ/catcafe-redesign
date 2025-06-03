@@ -1,8 +1,8 @@
+// transitions between each pages 
 document.addEventListener("DOMContentLoaded", () => {
   document.body.classList.add("fade-in");
 });
 
-// Fade-out before page leave
 document.querySelectorAll("a[href]").forEach(link => {
   const url = new URL(link.href);
   const isSameOrigin = url.origin === location.origin;
@@ -15,7 +15,32 @@ document.querySelectorAll("a[href]").forEach(link => {
 
       setTimeout(() => {
         window.location.href = link.href;
-      }, 400); // Matches CSS transition time
+      }, 400); 
     });
   }
+});
+
+// adding time slot
+document.addEventListener('DOMContentLoaded', () => {
+  // Get the 1PM time slot button
+  const slot1pm = document.getElementById('slot-1pm');
+
+  // Only proceed if the element exists
+  if (slot1pm) {
+    // Add click event listener
+    slot1pm.addEventListener('click', () => {
+      // Toggle the 'selected' class
+      slot1pm.classList.toggle('selected');
+    });
+  }
+});
+
+// calendar
+const calendarDays = document.querySelectorAll('.calendar-day:not(.empty)');
+
+calendarDays.forEach(day => {
+  day.addEventListener('click', () => {
+    calendarDays.forEach(d => d.classList.remove('selected'));
+    day.classList.add('selected');
+  });
 });

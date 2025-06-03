@@ -93,12 +93,10 @@ body.fade-in {
     background-color: #E5E7CE; 
     padding: 10px 20px;
     font-family: 'Jua', sans-serif;
-    font-size: 13px;
+    font-size: 12px;
 }
   
 .footer-container {
-    max-width: 1200px;
-    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -115,7 +113,7 @@ body.fade-in {
 .footer-links a {
     text-decoration: none;
     color: #968D8D;
-    font-size: 14px;
+    font-size: 12px;
 }
   
 .footer-social {
@@ -128,11 +126,11 @@ body.fade-in {
   
 .footer-social p {
     color: #968D8D;
-    font-size: 15px;
+    font-size: 12px;
 }
   
 .social-icons img {
-    width: 30px;
+    width: 20px;
     height: auto;
     margin-left: 10px;
 }
@@ -288,11 +286,6 @@ body.fade-in {
 
 /* --------------- BOOKAVISIT.HTML FILE --------------- */
 /* --------------- main information: BOOK A VISIT --------------- */
-.book-a-visit {
-    text-align: center;
-    padding: 40px 20px;
-}
-
 .back-home {
     display: flex;
     align-items: center;
@@ -326,6 +319,11 @@ body.fade-in {
 .back-visit:hover {
     color: #000;
     text-decoration-color: #000;
+}
+
+.book-a-visit {
+    text-align: center;
+    padding: 40px 20px;
 }
 
 .book-a-visit h1 {
@@ -460,4 +458,172 @@ body.fade-in {
   display: block;
   border-radius: 16px;
   gap: 100px;
+}
+
+/* --------------- SELECTADATE.HTML ------------------------------- */
+.select-a-date {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.select-a-date h1 {
+  font-size: 40px;
+  font-family: 'Jua', sans-serif;
+  margin-bottom: 10px;
+}
+
+.select-a-date p {
+  font-size: 25px;
+  font-family: 'Jua', sans-serif;
+  margin-bottom: 40px;
+}
+
+.divider {
+  color: #79747E;
+  margin-left: 5px;
+}
+
+.booking-layout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 0; 
+  margin-bottom: 0;  
+  margin-top: 60px;
+}
+
+
+.calendar-container {
+  flex: 1;
+  max-width: 500px;
+  display: flex;
+  justify-content: flex-end;
+  transform: translateX(-30px);
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr); /* 7 days per week */
+  gap: 10px;
+}
+
+.calendar-day {
+  font-family: 'Jua', sans-serif;
+  background-color: #fff;
+  padding: 12px;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: border 0.2s ease;
+}
+
+.calendar-day:hover {
+  border: 2px solid #A86635;
+}
+
+.calendar-day.selected {
+  border: 2px solid #000;
+  background-color: #fff;
+}
+
+.calendar-day.empty {
+  background: none;
+  border: none;
+  cursor: default;
+}
+
+
+.timeslots {
+  flex: 1;
+  min-width: 280px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-start;
+  max-width: 420px;
+}
+
+.slot-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.slot {
+  font-family: 'Jua', sans-serif;
+  font-size: 18px;
+  padding: 14px 20px;
+  color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 120px;
+  background-color: #D9D9D9; 
+  border: 2px solid transparent;            
+  box-shadow: none;         
+}
+
+.slot-status {
+  font-size: 16px !important;
+  font-weight: 400;
+  color: #000;
+  margin-top: 6px;
+  margin-bottom: 0;
+}
+
+
+.slot.sold-out {
+  background-color: #ff6c6c;
+  color: #2d1212;
+  cursor: not-allowed;
+  border: none;
+  box-shadow: none;
+}
+
+.slot.selected {
+  border: 2px solid black;
+}
+
+
+.next-btn-container {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 80px 20px; 
+  margin-top: 20px;
+  width: 100%;
+}
+
+.next-button {
+  font-family: 'Jua', sans-serif;
+  font-size: 16px;
+  background-color: #A86635;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 20px;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.next-button:hover {
+  background-color: #8e4c27;
+}
+
+@media (max-width: 768px) {
+  .calendar-container {
+    justify-content: center;
+    transform: none;
+  }
+
+  .calendar-img {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .next-btn-container {
+    justify-content: center;
+  }
 }
