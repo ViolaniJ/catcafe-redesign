@@ -714,8 +714,10 @@ body.fade-in {
 }
 
 .confirmation-wrapper {
-  max-width: 600px;
-  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
 }
 
 .confirmation-image {
@@ -730,23 +732,18 @@ body.fade-in {
   align-items: center;
   justify-content: center;
   text-align: center;
-  gap: 15px;
+  font-size: 24px;
+  font-family: 'Jua', sans-serif;
+  gap: 10px;
   flex-wrap: wrap;
   margin: 30px 0;
   padding: 0 20px; /* prevents overflow if screen is small */
 }
 
-.email-text {
-  font-size: 24px;
-  font-family: 'Jua', sans-serif;
-  font-weight: bold;
-  line-height: 1.4;
-  color: #000;
-}
-
 .paw {
   width: 40px;
   height: auto;
+  vertical-align: middle
 }
 
 
