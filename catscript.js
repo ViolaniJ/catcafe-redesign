@@ -36,11 +36,20 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // calendar
-const calendarDays = document.querySelectorAll('.calendar-day:not(.empty)');
+const slotBtn = document.getElementById("selectable-slot");
+  slotBtn.addEventListener("click", () => {
+    slotBtn.classList.toggle("selected");
+});
 
-calendarDays.forEach(day => {
-  day.addEventListener('click', () => {
-    calendarDays.forEach(d => d.classList.remove('selected'));
-    day.classList.add('selected');
+  const date18 = document.getElementById("selectable-date");
+  date18.addEventListener("click", () => {
+    date18.classList.toggle("selected-date");
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const date18 = document.querySelector('.calendar-day.selectable');
+
+  date18.addEventListener('click', function () {
+    this.classList.toggle('selected-date');
   });
 });

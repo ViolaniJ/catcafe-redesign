@@ -496,7 +496,6 @@ body.fade-in {
   margin-top: 60px;
 }
 
-
 .calendar-container {
   flex: 1;
   max-width: 500px;
@@ -505,38 +504,112 @@ body.fade-in {
   transform: translateX(-30px);
 }
 
+.calendar-box {
+  background-color: #dcdcdc;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 420px;
+  font-family: 'Jua', sans-serif;
+  overflow: hidden;
+}
+
+.calendar-header {
+  background-color: #2e8b57;
+  color: white;
+  padding: 12px;
+  text-align: center;
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.calendar-header .arrow {
+  cursor: pointer;
+  padding: 0 10px;
+  font-size: 20px;
+}
+
+.month-title {
+  flex: 1;
+  text-align: center;
+}
+
+.calendar-weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  background-color: #b8e4b8;
+  text-align: center;
+  padding: 8px 0;
+  font-weight: bold;
+}
+
+.calendar-day.disabled {
+  color: #aaa;
+  pointer-events: none;
+  opacity: 0.4;
+}
+
+.calendar-day.selectable.selected-date {
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  transform: scale(1.1);
+}
+
+.calendar-day.selectable {
+  cursor: pointer;
+  pointer-events: auto;  /* Make sure it’s clickable */
+  z-index: 1;
+}
+
 .calendar-grid {
   display: grid;
-  grid-template-columns: repeat(7, 1fr); /* 7 days per week */
-  gap: 10px;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+  padding: 10px;
+  position: relative;
 }
 
-.calendar-day {
-  font-family: 'Jua', sans-serif;
-  background-color: #fff;
-  padding: 12px;
-  border-radius: 10px;
+.calendar-grid::before,
+.calendar-grid::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: yellow;
+}
+
+.calendar-grid::before {
+  top: 28px; 
+}
+.calendar-grid::after {
+  top: 101px; 
+}
+.calendar-grid div {
   text-align: center;
-  cursor: pointer;
-  border: 2px solid transparent;
-  transition: border 0.2s ease;
+  padding: 8px 0;
+  font-size: 16px;
+  border-radius: 8px;
 }
 
-.calendar-day:hover {
-  border: 2px solid #A86635;
+.calendar-grid .dimmed {
+  color: #999;
 }
 
-.calendar-day.selected {
-  border: 2px solid #000;
-  background-color: #fff;
+.selected-slot {
+  border: 2px solid black;
 }
 
-.calendar-day.empty {
-  background: none;
-  border: none;
-  cursor: default;
+.selected-date {
+  background-color: white;
+  border-radius: 50%;
+  color: black;
+  font-weight: bold;
 }
-
 
 .timeslots {
   flex: 1;
@@ -626,4 +699,70 @@ body.fade-in {
   .next-btn-container {
     justify-content: center;
   }
+}
+
+
+
+/* --------------- BOOKINGCONFIRMATION.HTML ------------------------------- */
+.confirmed-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 70px 70px;
+  font-family: 'Jua', sans-serif;
+}
+
+.confirmation-wrapper {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.confirmation-image {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 30px;
+  margin-top: -50px;
+}
+
+.email-note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin: 30px 0;
+  padding: 0 20px; /* prevents overflow if screen is small */
+}
+
+.email-text {
+  font-size: 24px;
+  font-family: 'Jua', sans-serif;
+  font-weight: bold;
+  line-height: 1.4;
+  color: #000;
+}
+
+.paw {
+  width: 40px;
+  height: auto;
+}
+
+
+.thank-you-message {
+  font-size: 20px;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.back-home-link {
+  font-size: 16px;
+  text-decoration: none;
+  color: #a39e9e;
+  font-weight: bold;
+}
+
+.back-home-link:hover {
+  text-decoration: underline;
 }
