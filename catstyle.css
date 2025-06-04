@@ -18,7 +18,7 @@ body.fade-in {
     opacity: 1;
 }
 
-/* --------------- HEADER INFORMATION IS FOR ALL PAGES --------------- */
+/* ------------------------------------------------------ HEADER (for all pages) -------------------------------------------------------- */
 .site-header {
     background-color: #fff;
     text-align: center;
@@ -87,8 +87,13 @@ body.fade-in {
     position: relative;
     top: -11px;
 }
-/* --------------- END OF HEADER SECTION --------------- */
-/* --------------- FOOTER INFORMATION IS FOR ALL PAGES --------------- */
+/* ------------------------------------------------------------ END OF HEADER SECTION ----------------------------------------------------*/
+
+
+
+
+
+/* ------------------------------------------------------ FOOTER (for all pages) -------------------------------------------------------- */
 .site-footer {
     background-color: #E5E7CE; 
     padding: 10px 20px;
@@ -135,11 +140,13 @@ body.fade-in {
     margin-left: 10px;
 }
 
-/* --------------- END OF FOOTER SECTION --------------- */
+/* ------------------------------------------------------ END OF FOOTER SECTION ---------------------------------------------------------- */
 
 
-/* --------------- HOMEPAGE.HTML FILE --------------- */
-/* --------------- main information: HOMEPAGE --------------- */
+
+
+
+/* --------------------------------------------------------- INDEX.HTML ------------------------------------------------------------------ */
 .site-body {
     text-align: center;
     padding: 40px 0;
@@ -281,11 +288,13 @@ body.fade-in {
     font-size: 30px;
 }
 
-/* --------------- end of main section: HOMEPAGE --------------- */
-/* --------------- THE END OF HOMEPAGE.HTML FILE --------------- */
+/* --------------------------------------------------------- END OF INDEX.HTML ----------------------------------------------------------- */
 
-/* --------------- BOOKAVISIT.HTML FILE --------------- */
-/* --------------- main information: BOOK A VISIT --------------- */
+
+
+
+
+/* --------------------------------------------------------- BOOKAVISIT.HTML ------------------------------------------------------------- */
 .back-home {
     display: flex;
     align-items: center;
@@ -392,13 +401,14 @@ body.fade-in {
     flex-direction: column;
     align-items: center;
 }
-/* --------------- THE END OF BOOKAVISIT.HTML FILE --------------- */
+
+/* ------------------------------------------------------ THE END OF BOOKAVISIT.HTML FILE ------------------------------------------------ */
 
 
 
 
 
-/* --------------- SEARCHPAGE.HTML ------------------------------- */
+/* ------------------------------------------------------- SEARCHPAGE.HTML --------------------------------------------------------------- */
 .search-container {
     display: flex;
     justify-content: center;
@@ -459,8 +469,13 @@ body.fade-in {
   border-radius: 16px;
   gap: 100px;
 }
+/* ------------------------------------------------------ END OF SEARCHPAGE.HTML --------------------------------------------------------- */
 
-/* --------------- SELECTADATE.HTML ------------------------------- */
+
+
+
+
+/* -------------------------------------------------------- SELECTADATE.HTML ------------------------------------------------------------- */
 .select-a-date {
   text-align: center;
   padding: 40px 20px;
@@ -470,6 +485,15 @@ body.fade-in {
   font-size: 40px;
   font-family: 'Jua', sans-serif;
   margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.paw {
+  width: 30px;
+  height: auto;
 }
 
 .select-a-date p {
@@ -489,10 +513,7 @@ body.fade-in {
   align-items: center;
   gap: 40px;
   flex-wrap: wrap;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-bottom: 0; 
-  margin-bottom: 0;  
+  padding: 0 20px;
   margin-top: 60px;
 }
 
@@ -550,19 +571,21 @@ body.fade-in {
   opacity: 0.4;
 }
 
+.calendar-day.selectable {
+  cursor: pointer;
+  pointer-events: auto;
+  z-index: 1;
+  background-color: transparent;
+}
+
 .calendar-day.selectable.selected-date {
   background-color: white;
   color: black;
   font-weight: bold;
   border-radius: 50%;
-  transition: all 0.3s ease;
+  border: 3px solid black;
   transform: scale(1.1);
-}
-
-.calendar-day.selectable {
-  cursor: pointer;
-  pointer-events: auto;  /* Make sure it’s clickable */
-  z-index: 1;
+  transition: all 0.2s ease-in-out;
 }
 
 .calendar-grid {
@@ -584,11 +607,13 @@ body.fade-in {
 }
 
 .calendar-grid::before {
-  top: 28px; 
+  top: 28px;
 }
+
 .calendar-grid::after {
-  top: 101px; 
+  top: 101px;
 }
+
 .calendar-grid div {
   text-align: center;
   padding: 8px 0;
@@ -598,17 +623,6 @@ body.fade-in {
 
 .calendar-grid .dimmed {
   color: #999;
-}
-
-.selected-slot {
-  border: 2px solid black;
-}
-
-.selected-date {
-  background-color: white;
-  border-radius: 50%;
-  color: black;
-  font-weight: bold;
 }
 
 .timeslots {
@@ -633,11 +647,16 @@ body.fade-in {
   padding: 14px 20px;
   color: #000;
   text-align: center;
-  cursor: pointer;
+  cursor: not-allowed;
   width: 120px;
-  background-color: #D9D9D9; 
-  border: 2px solid transparent;            
-  box-shadow: none;         
+  background-color: #D9D9D9;
+  border: 2px solid transparent;
+  box-shadow: none;
+  transition: border 0.2s ease;
+}
+
+.slot.enabled {
+  cursor: pointer;
 }
 
 .slot-status {
@@ -647,7 +666,6 @@ body.fade-in {
   margin-top: 6px;
   margin-bottom: 0;
 }
-
 
 .slot.sold-out {
   background-color: #ff6c6c;
@@ -661,11 +679,11 @@ body.fade-in {
   border: 2px solid black;
 }
 
-
+/* ===== NEXT BUTTON ===== */
 .next-btn-container {
   display: flex;
   justify-content: flex-end;
-  padding: 0 80px 20px; 
+  padding: 0 80px 20px;
   margin-top: 20px;
   width: 100%;
 }
@@ -685,6 +703,7 @@ body.fade-in {
   background-color: #8e4c27;
 }
 
+/* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
   .calendar-container {
     justify-content: center;
@@ -701,9 +720,526 @@ body.fade-in {
   }
 }
 
+/* ------------------------------------------------------- END OF SEARCHPAGE.HTML -------------------------------------------------------- */
 
 
-/* --------------- BOOKINGCONFIRMATION.HTML ------------------------------- */
+
+
+
+/* ------------------------------------------------------------ SELECTPASS.HTML ---------------------------------------------------------- */
+body {
+  font-family: 'Jua', sans-serif;
+  background-color: #ffffff;
+  margin: 0;
+  padding: 0;
+}
+
+.booking-section {
+  padding: 40px 20px;
+}
+
+.breadcrumb {
+  font-size: 14px;
+  color: #79747E;
+  margin-bottom: 30px;
+  padding-left: 20px;
+}
+
+.breadcrumb a {
+  color: #79747E;
+  text-decoration: none;
+}
+
+.booking-layout {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.booking-menu {
+  min-width: 180px;
+  padding: 0 10px;
+}
+
+.booking-menu ul {
+  list-style: none;
+  padding: 0;
+  font-size: 16px;
+}
+
+.booking-menu li {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.paw-icon {
+  margin-left: 5px;
+}
+
+.booking-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 30px;
+  flex: 1;
+  max-width: 900px;
+}
+
+.pass-card {
+  background-color: #D1F1D4;
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.pass-card img {
+  width: 60px;
+  height: auto;
+}
+
+.pass-card h2 {
+  font-size: 20px;
+  margin: 10px 0 5px;
+}
+
+.pass-card p {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.pass-card .price {
+  font-size: 20px;
+  font-weight: bold;
+  background-color: #5CD17D;
+  border-radius: 100px;
+  color: white;
+  padding: 5px 12px;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.price.orange {
+  background-color: #F2994A;
+}
+
+.price.purple {
+  background-color: #C58CF2;
+}
+
+.price.gray {
+  background-color: #636363;
+}
+
+.quantity-selector {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.pass-card button {
+  font-size: 14px;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  background-color: #007F5F;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.pass-card button:hover {
+  background-color: #005c45;
+}
+
+.price-note {
+  grid-column: 1 / -1;
+  text-align: right;
+  font-size: 12px;
+  color: #264E36;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.pagination-buttons {
+  display: flex;
+  justify-content: space-between;
+  max-width: 300px;
+  margin: 40px auto 0;
+}
+
+.pagination-buttons button {
+  background-color: #A76B3C;
+  color: white;
+  border: none;
+  padding: 10px 22px;
+  font-size: 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-family: 'Jua', sans-serif;
+}
+
+.pagination-buttons button:hover {
+  background-color: #925c32;
+}
+/* ------------------------------------------------------- END OF SEARCHPAGE.HTML -------------------------------------------------------- */
+
+
+
+
+
+/* ------------------------------------------------------- SHOPPINGCART.HTML ------------------------------------------------------------- */
+/* Container Setup */
+.shopping-cart-page {
+  font-family: 'Jua', sans-serif;
+  padding: 40px 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cart-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  gap: 40px;
+}
+
+.back-to-cart {
+  color: #79747E;
+  text-decoration: none;
+  margin-bottom: 30px;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* Cart Table */
+.cart-table {
+  flex: 1.3;
+  min-width: 600px;
+}
+
+.cart-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  border-bottom: 2px solid black;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ddd;
+  padding: 20px 0;
+  gap: 15px;
+}
+
+.item-info {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  flex: 2;
+}
+
+.item-info img {
+  width: 60px;
+  height: 60px;
+}
+
+.item-text {
+  font-size: 14px;
+}
+
+.item-text .title {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.item-text .note {
+  font-size: 12px;
+}
+
+.date {
+  font-size: 12px;
+  color: #555;
+  margin-top: 5px;
+}
+
+.quantity-control {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.quantity-control button {
+  background: #d9d9d9;
+  border: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.quantity-control span {
+  font-size: 16px;
+  min-width: 20px;
+  text-align: center;
+}
+
+.item-price {
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+.remove-btn img {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+/* Subtotal */
+.cart-subtotal {
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+  font-weight: bold;
+  padding-top: 20px;
+}
+
+/* Checkout Form */
+.checkout-form {
+  flex: 1;
+  min-width: 300px;
+  background-color: #f1f1f1;
+  padding: 30px 20px;
+}
+
+.checkout-form h2 {
+  font-size: 16px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.checkout-form label {
+  display: block;
+  font-size: 13px;
+  margin-bottom: 15px;
+}
+
+.checkout-form input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: none;
+  border-radius: 3px;
+}
+
+.signin-note {
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+
+.signin-note a {
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.checkout-btn {
+  width: 100%;
+  background-color: #008751;
+  color: white;
+  font-size: 16px;
+  padding: 12px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-family: 'Jua', sans-serif;
+}
+
+/* ----------------------------------------------------END OF SHOPPINGCART.HTML ---------------------------------------------------------- */
+
+
+
+
+
+/* -------------------------------------------------------- CARDDETAILS.HTML ------------------------------------------------------------- */
+.checkout-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 60px 40px;
+  font-family: 'Jua', sans-serif;
+  gap: 40px;
+}
+
+.payment-info, .order-summary, .card-info {
+  flex: 1;
+  min-width: 300px;
+}
+
+h2 {
+  font-size: 18px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.back-to-cart {
+  font-size: 13px;
+  color: #79747E;
+  margin-bottom: 30px;
+}
+
+.back-to-cart a {
+  text-decoration: none;
+  color: #79747E;
+}
+
+.back-to-cart .current {
+  color: #79747E;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 6px;
+  margin-top: 20px;
+}
+
+.required {
+  color: red;
+}
+
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  font-family: 'Jua', sans-serif;
+  font-size: 14px;
+  border: none;
+  border-bottom: 1px solid black;
+  outline: none;
+  background: none;
+}
+
+textarea {
+  resize: none;
+  margin-top: 10px;
+}
+
+.coupon {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.coupon img {
+  width: 24px;
+  height: 24px;
+}
+
+.order-summary {
+  background-color: #f1f1f1;
+  padding: 30px;
+  border-radius: 5px;
+}
+
+.order-item {
+  margin-bottom: 25px;
+}
+
+.order-item p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.order-item strong {
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+.order-item span {
+  float: right;
+}
+
+.total-line {
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 0;
+}
+
+.total-line.total {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.card-info input[type="text"] {
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 4px;
+  margin-top: 5px;
+}
+
+.card-details {
+  display: flex;
+  gap: 10px;
+}
+
+.card-details div {
+  flex: 1;
+}
+
+.checkbox {
+  margin-top: 20px;
+  font-size: 13px;
+}
+
+.checkbox label {
+  display: inline;
+  margin-left: 5px;
+}
+
+.checkbox a {
+  color: #0077cc;
+  text-decoration: underline;
+}
+
+.confirm-button {
+  margin-top: 20px;
+  background-color: #2E7D32;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 20px;
+  font-family: 'Jua', sans-serif;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.confirm-button:hover {
+  background-color: #256328;
+}
+
+/* ----------------------------------------------------- END OF CARDDETAILS.HTML --------------------------------------------------------- */
+
+
+
+
+
+/* ------------------------------------------------------- BOOKINGCONFIRMATION.HTML ------------------------------------------------------ */
 .confirmed-page {
   display: flex;
   justify-content: center;
@@ -737,7 +1273,7 @@ body.fade-in {
   gap: 10px;
   flex-wrap: wrap;
   margin: 30px 0;
-  padding: 0 20px; /* prevents overflow if screen is small */
+  padding: 0 20px; 
 }
 
 .paw {
@@ -763,3 +1299,5 @@ body.fade-in {
 .back-home-link:hover {
   text-decoration: underline;
 }
+
+/* --------------------------------------------------- END OF BOOKINGCONFIRMATION.HTML --------------------------------------------------- */
