@@ -36,20 +36,18 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // calendar
-const slotBtn = document.getElementById("selectable-slot");
-  slotBtn.addEventListener("click", () => {
-    slotBtn.classList.toggle("selected");
-});
+  // Select all clickable calendar days
+  const days = document.querySelectorAll('.calendar-day.selectable');
 
-  const date18 = document.getElementById("selectable-date");
-  date18.addEventListener("click", () => {
-    date18.classList.toggle("selected-date");
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-  const date18 = document.querySelector('.calendar-day.selectable');
-
-  date18.addEventListener('click', function () {
-    this.classList.toggle('selected-date');
+  days.forEach(day => {
+    day.addEventListener('click', () => {
+      // If this day is already selected, remove it
+      if (day.classList.contains('selected-date')) {
+        day.classList.remove('selected-date');
+      } else {
+        // Otherwise, remove selection from others and select this one
+        days.forEach(d => d.classList.remove('selected-date'));
+        day.classList.add('selected-date');
+      }
+    });
   });
-});

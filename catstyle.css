@@ -5,6 +5,10 @@ html, body {
     flex-direction: column;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 main {
     flex: 1;
 }
@@ -34,8 +38,14 @@ body.fade-in {
 .logo-container {
     position: relative;
 }
-  
-.header-nav .shoppingcart,
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 20px; 
+  margin-right: 20px;
+}
+
 .header-nav .profile {
     position: absolute;
     top: 20px;
@@ -43,12 +53,37 @@ body.fade-in {
     height: auto;
 }
   
-.header-nav .shoppingcart {
-    right: 58px; 
-}
-  
 .header-nav .profile {
     right: 30px; 
+}
+
+.shoppingcart {
+  position: absolute;
+  top: 43px;            
+  right: 120px;          
+  font-size: 26px;
+  color: black;
+  display: inline-block;
+}
+
+.shoppingcart .material-icons {
+  font-size: 35px;
+  vertical-align: middle;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -6px;
+  right: -10px;
+  background: #108645;
+  color: white;
+  font-size: 12px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 18px;
+  font-weight: bold;
 }
   
 .navbar {
@@ -472,10 +507,20 @@ body.fade-in {
 /* ------------------------------------------------------ END OF SEARCHPAGE.HTML --------------------------------------------------------- */
 
 
-
-
-
 /* -------------------------------------------------------- SELECTADATE.HTML ------------------------------------------------------------- */
+.back-choose {
+    margin-left: 5px;
+    font-family: 'Jua', sans-serif;
+    font-size: 16px;
+    text-decoration: none;
+    color: #79747E;
+}
+  
+.back-choose:hover {
+    color: #000;
+    text-decoration-color: #000;
+}
+
 .select-a-date {
   text-align: center;
   padding: 40px 20px;
@@ -543,12 +588,18 @@ body.fade-in {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 16px 20px;
+  height: 60px;
 }
 
 .calendar-header .arrow {
+  font-size: 24px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
   cursor: pointer;
-  padding: 0 10px;
-  font-size: 20px;
 }
 
 .month-title {
@@ -578,14 +629,30 @@ body.fade-in {
   background-color: transparent;
 }
 
+.calendar-day .dimmed {
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+  display: inline-block;
+  text-align: center;
+  font-size: 16px;
+}
+
 .calendar-day.selectable.selected-date {
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+  display: inline-block;
+  text-align: center;
+  font-size: 16px;
   background-color: white;
   color: black;
   font-weight: bold;
   border-radius: 50%;
-  border: 3px solid black;
-  transform: scale(1.1);
+  border: 2px solid black;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
   transition: all 0.2s ease-in-out;
+  transform: none; /* removed scale to prevent overflow */
 }
 
 .calendar-grid {
@@ -594,24 +661,6 @@ body.fade-in {
   gap: 4px;
   padding: 10px;
   position: relative;
-}
-
-.calendar-grid::before,
-.calendar-grid::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background: yellow;
-}
-
-.calendar-grid::before {
-  top: 28px;
-}
-
-.calendar-grid::after {
-  top: 101px;
 }
 
 .calendar-grid div {
@@ -623,6 +672,36 @@ body.fade-in {
 
 .calendar-grid .dimmed {
   color: #999;
+}
+
+.calendar-box {
+  position: relative; /* needed for absolute positioning inside */
+}
+
+/* Yellow lines for specific week rows */
+.calendar-line {
+  position: absolute;
+  height: 2px;
+  background-color: #FFE500; /* bright yellow */
+  left: 10px;
+  right: 10px;
+  z-index: 2;
+}
+
+.calendar-line.line-1 {
+  top: 122px;
+}
+
+.calendar-line.line-2 {
+  top: 162px;
+}
+
+.calendar-line.line-3 {
+  top: 202px;
+}
+
+.calendar-line.line-3 {
+  right: 45%;
 }
 
 .timeslots {
@@ -683,7 +762,7 @@ body.fade-in {
 .next-btn-container {
   display: flex;
   justify-content: flex-end;
-  padding: 0 80px 20px;
+  padding: 0 20px 20px;
   margin-top: 20px;
   width: 100%;
 }
