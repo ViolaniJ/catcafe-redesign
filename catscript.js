@@ -37,17 +37,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // calendar
   // Select all clickable calendar days
-  const days = document.querySelectorAll('.calendar-day.selectable');
+const days = document.querySelectorAll('.calendar-day.selectable');
 
-  days.forEach(day => {
-    day.addEventListener('click', () => {
+days.forEach(day => {
+  day.addEventListener('click', () => {
       // If this day is already selected, remove it
-      if (day.classList.contains('selected-date')) {
-        day.classList.remove('selected-date');
-      } else {
+    if (day.classList.contains('selected-date')) {
+       day.classList.remove('selected-date');
+    } else {
         // Otherwise, remove selection from others and select this one
-        days.forEach(d => d.classList.remove('selected-date'));
-        day.classList.add('selected-date');
-      }
-    });
+      days.forEach(d => d.classList.remove('selected-date'));
+      day.classList.add('selected-date');
+    }
   });
+});
