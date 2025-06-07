@@ -6,6 +6,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
@@ -59,7 +61,7 @@
             <div class="booking-layout">
                 <aside class="booking-menu">
                     <ul>
-                        <li><strong>STANDARD PASSES</strong> <span class="paw-icon">🐾</span></li>
+                        <li><strong>STANDARD PASSES</strong> <span class="paw-icon"><i class="fas fa-paw"></i></span></li>
                         <li>COMBO TREAT PACKS</li>
                         <li>SOUVENIR PACKS</li>
                         <li>ADD-ONS</li>
@@ -74,31 +76,39 @@
                                 <div class="card-text">
                                     <h2>1 HOUR PASS</h2>
                                     <p>Entry Only</p>
+                                    <span class="price">$19</span>
                                 </div>
                             </div>
-                            <div class="price-wrapper">
-                                <span class="price">$19</span>
-                            </div>
+                            
+                            <!--enabled-->
                             <div class="card-bottom">
-                                <div class="quantity-selector">0</div>
-                                <button>Add to Cart</button>
+                                <div class="quantity-selector">
+                                    <button class="qty-btn minus">-</button>
+                                    <span class="qty-value">0</span>
+                                    <button class="qty-btn plus">+</button>
+                                </div>
+                                <button class="add-to-cart">Add to Cart</button>
                             </div>
                         </div>
-
+                        
+                        <!--disabled-->
                         <div class="pass-card">
                             <div class="card-top">
                                 <img src="images/brown-cat.png" alt="cat face">
                                 <div class="card-text">
                                     <h2>1 HOUR PASS</h2>
                                     <p>+ Complimentary Drink</p>
+                                    <span class="price orange">$22</span>
                                 </div>
                             </div>
-                            <div class="price-wrapper">
-                                <span class="price orange">$22</span>
-                            </div>
+                          
                             <div class="card-bottom">
-                                <div class="quantity-selector">0</div>
-                                <button>Add to Cart</button>
+                                <div class="quantity-selector">
+                                    <button class="qty-btn" disabled>-</button>
+                                    <span class="qty-value">0</span>
+                                    <button class="qty-btn" disabled>+</button>
+                                </div>
+                                <button class="add-to-cart" disabled>Add to Cart</button>
                             </div>
                         </div>
 
@@ -108,14 +118,17 @@
                                 <div class="card-text">
                                     <h2>1 HOUR PASS</h2>
                                     <p>+ Hot Coffee OR Chocolate OR Tea</p>
+                                    <span class="price orange">$24.5</span>
                                 </div>
                             </div>
-                            <div class="price-wrapper">
-                                <span class="price orange">$24.5</span>
-                            </div>
+                            
                             <div class="card-bottom">
-                                <div class="quantity-selector">0</div>
-                                <button>Add to Cart</button>
+                                <div class="quantity-selector">
+                                    <button class="qty-btn minus">-</button>
+                                    <span class="qty-value">0</span>
+                                    <button class="qty-btn plus">+</button>
+                                </div>
+                                <button class="add-to-cart">Add to Cart</button>
                             </div>
                         </div>
 
@@ -125,14 +138,17 @@
                                 <div class="card-text">
                                     <h2>1 HOUR PASS</h2>
                                     <p>+ Iced Coffee OR Chocolate OR Fruity Tea</p>
+                                    <span class="price orange">$25.5</span>
                                 </div>
                             </div>
-                            <div class="price-wrapper">    
-                                <span class="price orange">$25.5</span>
-                            </div>
+                        
                             <div class="card-bottom">
-                                <div class="quantity-selector">0</div>
-                                <button>Add to Cart</button>
+                                <div class="quantity-selector">
+                                    <button class="qty-btn" disabled>-</button>
+                                    <span class="qty-value">0</span>
+                                    <button class="qty-btn" disabled>+</button>
+                                </div>
+                                <button class="add-to-cart" disabled>Add to Cart</button>
                             </div>
                         </div>
 
@@ -142,14 +158,17 @@
                                 <div class="card-text">
                                     <h2>2 HOURS PASS</h2>
                                     <p>+ Drink<br> + Cat Biscuits and Cat Paste Treats</p>
+                                    <span class="price purple">$47</span>
                                 </div>
                             </div> 
-                            <div class="price-wrapper">   
-                                <span class="price purple">$47</span>
-                            </div>
+                          
                             <div class="card-bottom">
-                                <div class="quantity-selector">0</div>
-                                <button>Add to Cart</button>
+                                <div class="quantity-selector">
+                                    <button class="qty-btn" disabled>-</button>
+                                    <span class="qty-value">0</span>
+                                    <button class="qty-btn" disabled>+</button>
+                                </div>
+                                <button class="add-to-cart" disabled>Add to Cart</button>
                             </div>
                         </div>
 
@@ -158,22 +177,25 @@
                                 <img src="images/black-cat.png" alt="cat face">
                                 <div class="card-text">
                                     <h2>3 HOURS PASS</h2>
-                                    <p>+ Drink<br>+ Cat Treats<br>+ 2x Paste Treats<br>+ 2x Fish Bites<br>+ 2x Cat Biscuits</p>
+                                    <p>+ Drink<br>+ Cat Treats<br>● 2x Paste Treats<br>● 2x Fish Bites<br>● 2x Cat Biscuits</p>
+                                    <span class="price gray">$70</span>
                                 </div>
                             </div>
-                            <div class="price-wrapper">
-                                <span class="price gray">$70</span>
-                            </div>
+                           
                             <div class="card-bottom">
-                                <div class="quantity-selector">0</div>
-                                <button>Add to Cart</button>
+                                <div class="quantity-selector">
+                                    <button class="qty-btn" disabled>-</button>
+                                    <span class="qty-value">0</span>
+                                    <button class="qty-btn" disabled>+</button>
+                                </div>
+                                <button class="add-to-cart" disabled>Add to Cart</button>
                             </div>
                         </div>
                     </section>
                 </div>
                 <aside class="aside-right">
                     <div class="price-note">
-                        <p>$ ALL PRICES ARE PER PERSON</p>
+                        <p>$ ALL PRICES ARE<br> PER PERSON</p>
                     </div>
                 </aside>
             </div>

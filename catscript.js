@@ -51,3 +51,28 @@ days.forEach(day => {
     }
   });
 });
+
+//adding quantity 
+document.querySelectorAll('.quantity-selector').forEach(selector => {
+  const minusBtn = selector.querySelector('.minus');
+  const plusBtn = selector.querySelector('.plus');
+  const qtyValue = selector.querySelector('.qty-value');
+
+  if (!minusBtn || !plusBtn || !qtyValue) return;
+
+  let count = 0;
+
+  plusBtn.addEventListener('click', () => {
+    if (count < 1) {
+      count++;
+      qtyValue.textContent = count;
+    }
+  });
+
+  minusBtn.addEventListener('click', () => {
+    if (count > 0) {
+      count--;
+      qtyValue.textContent = count;
+    }
+  });
+});
