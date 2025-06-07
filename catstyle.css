@@ -804,6 +804,27 @@ body.fade-in {
 
 
 /* ------------------------------------------------------------ SELECTPASS.HTML ---------------------------------------------------------- */
+.cart-badge {
+  position: absolute;
+  top: -6px;
+  right: -10px;
+  background-color: #108645;
+  color: white;
+  font-size: 12px;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.cart-badge.hidden {
+  display: none;
+}
+
 body {
   font-family: 'Jua', sans-serif;
   background-color: #ffffff;
@@ -816,7 +837,7 @@ body {
 }
 
 .selectpass-back-home {
-  margin-top: -10px; /* less negative = moves lower */
+  margin-top: -10px; 
 }
 
 .booking-layout {
@@ -831,19 +852,19 @@ body {
 .booking-menu {
   min-width: 180px;
   padding: 0 10px;
-  margin-right: 10px; /* 👈 space between sidebar and products */
+  margin-right: 10px; 
 }
 
 @media (max-width: 1024px) {
   .booking-menu {
-    margin-right: 40px; /* Slightly smaller gap */
+    margin-right: 40px; 
   }
 }
 
-/* Small screens: mobile */
+
 @media (max-width: 768px) {
   .booking-layout {
-    flex-direction: column; /* Stack aside above products */
+    flex-direction: column; 
     align-items: stretch;
   }
 
@@ -854,16 +875,16 @@ body {
   }
 
   .booking-options-scroll {
-    width: 100%; /* make it full width */
+    width: 100%; 
   }
 }
 
 .booking-options-scroll {
-  max-height: 520px; /* or whatever fits nicely on your layout */
+  max-height: 520px; 
   overflow-y: auto;
   overflow-x: hidden;
   flex-shrink: 1;
-  width: auto;                    /* 👈 key: this controls the scroll container width */
+  width: auto;                    
   padding-right: 8px;
 }
 
@@ -872,7 +893,7 @@ body {
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 30px;
   padding-right: 10px;
-  max-width: 900px; /* ✅ put width control here instead */
+  max-width: 900px; 
   margin: 0 auto;
 }
 

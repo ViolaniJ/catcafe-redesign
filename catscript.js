@@ -76,3 +76,30 @@ document.querySelectorAll('.quantity-selector').forEach(selector => {
     }
   });
 });
+
+// adding shopping bubble
+let cartCount = 0;
+const cartBadge = document.querySelector('.cart-badge');
+
+document.querySelectorAll('.pass-card').forEach(card => {
+  const addToCartBtn = card.querySelector('.add-to-cart');
+  const qtyValue = card.querySelector('.qty-value');
+
+  if (!addToCartBtn || !qtyValue) return;
+
+  addToCartBtn.addEventListener('click', () => {
+    const quantity = parseInt(qtyValue.textContent, 10);
+    if (quantity > 0) {
+      cartCount += quantity;
+      cartBadge.textContent = cartCount;
+
+      // ✨ Show the badge when count > 0
+      if (cartCount > 0) {
+        cartBadge.classList.remove('hidden');
+      }
+
+      // Optional: reset the quantity
+      qtyValue.textContent = 0;
+    }
+  });
+});
