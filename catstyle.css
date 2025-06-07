@@ -1013,19 +1013,19 @@ body {
   text-align: center;
   box-shadow: 0 4px 6px rgba(0,0,0,0.2);
   margin-bottom: 12px;
-  margin-top: -60pxpx;
+  margin-top: -60px;
 }
 
 .price.orange {
-  background-color: #F2994A;
+  background-color: #D37635;
 }
 
 .price.purple {
-  background-color: #C58CF2;
+  background-color: #B270C1;
 }
 
 .price.gray {
-  background-color: #636363;
+  background-color: #5E5E5E;
 }
 
 .card-bottom {
@@ -1068,26 +1068,28 @@ body {
   font-weight: bold;
 }
 
-.pagination-buttons {
+.change-page {
   display: flex;
   justify-content: space-between;
-  max-width: 300px;
-  margin: 40px auto 0;
+  padding: 0 50px 50px;
+  margin-top: 20px;
+  width: 100%;
 }
 
-.pagination-buttons button {
-  background-color: #A76B3C;
-  color: white;
-  border: none;
-  padding: 10px 22px;
-  font-size: 14px;
-  border-radius: 20px;
-  cursor: pointer;
+.prev {
   font-family: 'Jua', sans-serif;
+  font-size: 16px;
+  background-color: #A86635;
+  color: white;
+  justify-content: flex-start;
+  padding: 12px 24px;
+  border-radius: 20px;
+  text-decoration: none;
+  transition: background 0.2s ease;
 }
 
-.pagination-buttons button:hover {
-  background-color: #925c32;
+.prev:hover {
+  background-color: #8e4c27;
 }
 /* ------------------------------------------------------- END OF SELECTPASS.HTML -------------------------------------------------------- */
 
