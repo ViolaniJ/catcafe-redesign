@@ -49,70 +49,46 @@
 
     <main class="shopping-cart-page">
         <!-- back link: update later -->
-        <div class="cart-container">
-            <a href="#" class="back-to-cart"></a>
-
-            <div class="cart-table">
-                <div class="cart-header">
-                    <span>PRODUCT</span>
-                    <span>QUANTITY</span>
-                    <span>PRICE</span>
-                </div>
-
-                <div class="cart-item">
-                    <div class="item-info">
-                        <img src="images/entryonlycat.png" alt="Entry Only Cat">
-                        <div class="item-text">
-                            <p class="title">GENERAL VISIT SESSION</p>
-                            <p class="subtitle">1 HOUR PASS<br><span class="note">Entry Only</span></p>
-                            <p class="date">Friday, 18th April, 2025 @ 1:00 PM (GMT+10)</p>
-                        </div>
-                    </div>
-                    <div class="quantity-control">
-                        <button>-</button>
-                        <span>1</span>
-                        <button>+</button>
-                    </div>
-                    <div class="item-price">$19</div>
-                    <button class="remove-btn"><img src="images/trash.png" alt="Delete"></button>
-                </div>
-
-                <div class="cart-item">
-                    <div class="item-info">
-                        <img src="images/hotdrinkcat.png" alt="Cat With Drink">
-                        <div class="item-text">
-                            <p class="title">GENERAL VISIT SESSION</p>
-                            <p class="subtitle">1 HOUR PASS<br><span class="note">+ Hot Coffee OR Chocolate OR Tea</span></p>
-                            <p class="date">Friday, 18th April, 2025 @ 1:00 PM (GMT+10)</p>
-                        </div>
-                    </div>
-                    <div class="quantity-control">
-                        <button>-</button>
-                        <span>1</span>
-                        <button>+</button>
-                    </div>
-                    <div class="item-price">$24.5</div>
-                    <button class="remove-btn"><img src="images/trash.png" alt="Delete"></button>
-                </div>
-
-                <div class="cart-subtotal">
-                    <span>SUBTOTAL</span>
-                    <span>$43.5</span>
+        <section class="shopping-cart-section">
+            <div class="back-wrapper">
+                <div class="back-pass">
+                    <a href="selectpass.html" class="back-link">←</a>
+                    <a href="shoppingcart.html" class="back-visit"> Shopping Cart </a>
                 </div>
             </div>
 
-            <div class="checkout-form">
-                <h2>CONTACT INFORMATION</h2>
-                <form>
-                    <label>FIRST NAME *<br><input type="text" required></label>
-                    <label>LAST NAME *<br><input type="text" required></label>
-                    <label>EMAIL *<br><input type="email" placeholder="e.g. abcd1234@xxxx.com" required></label>
-                    <label>PHONE NUMBER *<br><input type="tel" placeholder="e.g. 04XXXXXXXX" required></label>
-                    <p class="signin-note">Already have an account? <a href="#">Sign in</a></p>
-                    <button type="submit" class="checkout-btn">PROCEED TO CHECKOUT</button>
-                </form>
+            <div class="cart-container">
+                <a href="#" class="back-to-cart"></a>
+
+                <div class="cart-table">
+                    <div class="cart-header">
+                        <span class="product">PRODUCT</span>
+                        <span class="quantity">QUANTITY</span>
+                        <span class="price">PRICE</span>
+                    </div>
+
+                    <div class="cart-items"></div>
+
+                    <div class="cart-subtotal">
+                        <span class="subtotal">SUBTOTAL</span>
+                        <span class="subtotal-quantity"></span>
+                        <span class="subtotal-amount">$0.00</span>
+                    </div>
+                </div>
+
+                <div class="checkout-form">
+                    <h2>CONTACT INFORMATION</h2>
+                    <form>
+                        <label>First Name <span class="required">*</span><br><input type="text" required></label>
+                        <label>Last Name <span class="required">*</span><br><input type="text" required></label>
+                        <label>Email <span class="required">*</span><br><input type="email" placeholder="e.g. abcd1234@xxxx.com" required></label>
+                        <label>Phone Number <span class="required">*</span><br><input type="tel" placeholder="e.g. 04XXXXXXXX" required></label>
+                        <p class="signin-note">Already have an account? <a href="#">Sign in</a></p>
+                        <button type="submit" class="checkout-btn" onclick="window.location.href='carddetails.html'">PROCEED TO CHECKOUT</button>
+                    </form>
+                </div>
             </div>
-        </div>
+        </section>
     </main>
 
     <footer class="site-footer">

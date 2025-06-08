@@ -399,8 +399,8 @@ body.fade-in {
 .visit-option {
     background-color: #108645;
     border-radius: 20px;
-    width: 180px;
-    height: 180px;
+    width: 230px;
+    height: 230px;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     display: flex;
@@ -444,44 +444,27 @@ body.fade-in {
 
 
 /* ------------------------------------------------------- SEARCHPAGE.HTML --------------------------------------------------------------- */
-.search-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 40px auto 20px auto;
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  max-width: 1000px;
+  margin: 70px auto;
+  padding: 0 20px;
 }
 
-.search-wrapper {
-    position: relative;
-    width: 440px;
-    margin: 0 auto;
+.grid-item:hover {
+  transform: translateY(-5px);
 }
 
-.search-bar {
-    width: 82%;
-    font-size: 20px;
-    padding: 12px 40px 12px 40px;
-    border: none;
-    border-radius: 12px;
-    background-color: #f0f0f0;
-    font-family: 'Jua', sans-serif;
-    color: #333;
-}
-
-.search-bar::placeholder {
-    color: #B3B3B3;
-    opacity: 0.6;
-}
-
-.search-icon {
-    position: absolute;
-    left: 12px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 18px;
-    height: 18px;
-    opacity: 0.6;
-    pointer-events: none;
+.grid-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 16px;
+  gap: 100px;
 }
 
 .grid-container {
@@ -491,6 +474,18 @@ body.fade-in {
   max-width: 1000px;
   margin: 70px auto;
   padding: 0 20px;
+}
+
+.grid-item:hover {
+  transform: translateY(-5px);
+}
+
+.grid-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 16px;
+  gap: 100px;
 }
 
 .grid-item:hover {
@@ -1141,9 +1136,24 @@ body {
 
 /* ------------------------------------------------------- SHOPPINGCART.HTML ------------------------------------------------------------- */
 /* Container Setup */
-.shopping-cart-page {
+.back-wrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin: -30px auto 15px 60px;
+  align-self: flex-start;
+}
+
+.back-pass {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+
+.shopping-cart-section {
   font-family: 'Jua', sans-serif;
-  padding: 40px 5%;
+  padding: 40px ;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1175,12 +1185,29 @@ body {
 
 .cart-header {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   font-size: 16px;
+  width: calc(100% + 10px); /* extend 20px on each side */
+  margin-left: -20px;       /* pull it back into alignment */
   border-bottom: 2px solid black;
   padding-bottom: 10px;
-  margin-bottom: 20px;
   text-transform: uppercase;
+}
+
+.cart-header .product {
+  flex: 2;
+  padding-left: 20px;
+}
+
+.cart-header .quantity {
+  flex: 1;
+  text-align: center;
+}
+
+.cart-header .price {
+  flex: 1;
+  text-align: left;
+  padding-right: 20px;
 }
 
 .cart-item {
@@ -1259,30 +1286,59 @@ body {
 /* Subtotal */
 .cart-subtotal {
   display: flex;
-  justify-content: space-between;
-  font-size: 18px;
+  justify-content: flex-start;
+  font-size: 16px;
   font-weight: bold;
-  padding-top: 20px;
+  width: calc(100% + 10px); /* extend 20px on each side */
+  margin-left: -20px;       /* pull it back into alignment */
+  border-bottom: 2px solid black;
+  padding-bottom: 10px;
+  border-top: 2px solid black;
+  padding-top: 10px;
+  margin: auto 10px 20px -20px;
+}
+
+.cart-subtotal .subtotal {
+  flex: 2;
+  padding-left: 20px;
+}
+
+.cart-subtotal .subtotal-quantity {
+  flex: 1;
+  /* leave blank — this is for alignment only */
+}
+
+.cart-subtotal .subtotal-amount {
+  flex: 1;
+  text-align: left;
+  padding-right: 20px;
 }
 
 /* Checkout Form */
 .checkout-form {
   flex: 1;
-  min-width: 300px;
+  min-width: 320px;
+  max-width: 360px;
   background-color: #f1f1f1;
-  padding: 30px 20px;
+  padding: 30px 30px;
 }
 
 .checkout-form h2 {
-  font-size: 16px;
+  font-size: 18px;
   margin-bottom: 20px;
   text-transform: uppercase;
+  border-bottom: 2px solid #000; /* 🔽 adds the line */
+  padding-bottom: 10px;
 }
 
 .checkout-form label {
   display: block;
-  font-size: 13px;
+  font-size: 15px;
   margin-bottom: 15px;
+}
+
+.required {
+  color: red;
 }
 
 .checkout-form input {
@@ -1296,17 +1352,17 @@ body {
 .signin-note {
   font-size: 12px;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 .signin-note a {
-  color: #000;
+  color: #1010FF;
   font-weight: bold;
-  text-decoration: none;
 }
 
 .checkout-btn {
   width: 100%;
-  background-color: #008751;
+  background-color: #108645;
   color: white;
   font-size: 16px;
   padding: 12px;
@@ -1314,6 +1370,10 @@ body {
   border-radius: 20px;
   cursor: pointer;
   font-family: 'Jua', sans-serif;
+}
+
+.checkout-btn:hover {
+  background-color: #003922;
 }
 
 /* ----------------------------------------------------END OF SHOPPINGCART.HTML ---------------------------------------------------------- */
