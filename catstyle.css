@@ -1011,6 +1011,12 @@ body {
   line-height: 1.5;
   margin-top: 4px;
   font-weight: 500;
+  min-height: 42px;
+  display: block;
+}
+
+.card-text {
+  min-height: 70px;
 }
 
 .pass-card img {
@@ -1098,7 +1104,9 @@ body {
   font-size: 15px;
   font-weight: bold;
   min-width: 20px;
+  max-width: 24px;
   text-align: center;
+  display: inline-block;
 }
 
 .add-to-cart {

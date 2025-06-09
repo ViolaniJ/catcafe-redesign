@@ -1,6 +1,7 @@
-// transitions between each pages 
+// ====== Page Transition Effect ======
 document.addEventListener("DOMContentLoaded", () => {
   document.body.classList.add("fade-in");
+  updateCartBadge(); // update cart bubble on page load
 });
 
 document.querySelectorAll("a[href]").forEach(link => {
@@ -15,44 +16,33 @@ document.querySelectorAll("a[href]").forEach(link => {
 
       setTimeout(() => {
         window.location.href = link.href;
-      }, 400); 
+      }, 400);
     });
   }
 });
 
-// adding time slot
-document.addEventListener('DOMContentLoaded', () => {
-  // Get the 1PM time slot button
-  const slot1pm = document.getElementById('slot-1pm');
+// ====== Time Slot Selection ======
+const slot1pm = document.getElementById('slot-1pm');
+if (slot1pm) {
+  slot1pm.addEventListener('click', () => {
+    slot1pm.classList.toggle('selected');
+  });
+}
 
-  // Only proceed if the element exists
-  if (slot1pm) {
-    // Add click event listener
-    slot1pm.addEventListener('click', () => {
-      // Toggle the 'selected' class
-      slot1pm.classList.toggle('selected');
-    });
-  }
-});
-
-// calendar
-  // Select all clickable calendar days
+// ====== Calendar Date Selection ======
 const days = document.querySelectorAll('.calendar-day.selectable');
-
 days.forEach(day => {
   day.addEventListener('click', () => {
-      // If this day is already selected, remove it
     if (day.classList.contains('selected-date')) {
-       day.classList.remove('selected-date');
+      day.classList.remove('selected-date');
     } else {
-        // Otherwise, remove selection from others and select this one
       days.forEach(d => d.classList.remove('selected-date'));
       day.classList.add('selected-date');
     }
   });
 });
 
-//adding quantity 
+// ====== Quantity Selector ======
 document.querySelectorAll('.quantity-selector').forEach(selector => {
   const minusBtn = selector.querySelector('.minus');
   const plusBtn = selector.querySelector('.plus');
@@ -63,29 +53,27 @@ document.querySelectorAll('.quantity-selector').forEach(selector => {
   let count = 0;
 
   plusBtn.addEventListener('click', () => {
+    let count = parseInt(qtyValue.textContent);
     if (count < 1) {
-      count++;
-      qtyValue.textContent = count;
+      qtyValue.textContent = count + 1;
     }
   });
 
   minusBtn.addEventListener('click', () => {
+    let count = parseInt(qtyValue.textContent);
     if (count > 0) {
-      count--;
-      qtyValue.textContent = count;
+      qtyValue.textContent = count - 1;
     }
   });
 });
 
-// adding shopping bubble
-// ====== Quantity and Add to Cart Logic (selectpass.html) ======
+// ====== Pass Card Logic (selectpass.html) ======
 document.querySelectorAll('.pass-card').forEach(card => {
   const minusBtn = card.querySelector('.minus');
   const plusBtn = card.querySelector('.plus');
   const qtyValue = card.querySelector('.qty-value');
   const addToCartBtn = card.querySelector('.add-to-cart');
 
-  // Quantity buttons
   if (minusBtn && plusBtn && qtyValue) {
     minusBtn.addEventListener('click', () => {
       let qty = parseInt(qtyValue.textContent);
@@ -98,7 +86,6 @@ document.querySelectorAll('.pass-card').forEach(card => {
     });
   }
 
-  // Add to cart button
   if (addToCartBtn && qtyValue) {
     addToCartBtn.addEventListener('click', () => {
       const quantity = Math.min(parseInt(qtyValue.textContent), 1);
@@ -111,15 +98,13 @@ document.querySelectorAll('.pass-card').forEach(card => {
 
         let image = '';
         let date = 'Friday, 18th April, 2025 @ 1:00 PM (GMT+10)';
-        if (id === 'pass-001') {
-          image = 'images/green-cat.png';
-        
-        } else if (id === 'pass-003') {
-          image = 'images/brown-cat.png';
-        }
+        if (id === 'pass-001') image = 'images/green-cat.png';
+        else if (id === 'pass-003') image = 'images/brown-cat.png';
+
+        // Reset confirmation status on new item
+        localStorage.setItem('checkoutConfirmed', 'false');
 
         let cart = JSON.parse(localStorage.getItem('cart')) || [];
-
         const existingItem = cart.find(item => item.id === id);
         if (existingItem) {
           existingItem.quantity += quantity;
@@ -138,14 +123,15 @@ document.querySelectorAll('.pass-card').forEach(card => {
   }
 });
 
-// ====== Update Cart Badge (runs on all pages) ======
+// ====== Update Cart Bubble ======
 function updateCartBadge() {
   const cartBadge = document.querySelector('.cart-badge');
   const cart = JSON.parse(localStorage.getItem('cart')) || [];
+  const checkoutConfirmed = localStorage.getItem('checkoutConfirmed') === 'true';
   const totalQty = cart.reduce((sum, item) => sum + item.quantity, 0);
 
   if (cartBadge) {
-    if (totalQty > 0) {
+    if (totalQty > 0 && !checkoutConfirmed) {
       cartBadge.textContent = totalQty;
       cartBadge.classList.remove('hidden');
     } else {
@@ -153,9 +139,8 @@ function updateCartBadge() {
     }
   }
 }
-updateCartBadge(); // Run on load
 
-// ====== Display Cart Items on shoppingcart.html ======
+// ====== Display Cart Items (shoppingcart.html) ======
 function renderCartItems() {
   const cartItemsContainer = document.querySelector('.cart-items');
   const subtotalAmount = document.querySelector('.subtotal-amount');
@@ -171,7 +156,7 @@ function renderCartItems() {
     subtotal += itemTotal;
 
     const itemHTML = `
-      <div class="cart-item-row">
+      <div class="cart-item-row" data-id="${item.id}">
         <div class="item-info">
           <img src="${item.image}" alt="${item.title}">
           <div class="item-text">
@@ -182,19 +167,14 @@ function renderCartItems() {
         </div>
         <div class="quantity-col">
           <div class="quantity-control">
-            <button enabled>-</button>
+            <button>-</button>
             <span>${item.quantity}</span>
-            <button enabled>+</button>
+            <button>+</button>
           </div>
         </div>
-        <div class="price-col">
-          $${itemTotal.toFixed(2)}
-        </div>
-
+        <div class="price-col">$${itemTotal.toFixed(2)}</div>
         <div class="remove-col">
-          <button class="remove-btn">
-            <span class="material-icons">delete</span>
-          </button>
+          <button class="remove-btn"><span class="material-icons">delete</span></button>
         </div>
       </div>
     `;
@@ -202,14 +182,34 @@ function renderCartItems() {
   });
 
   subtotalAmount.textContent = `$${subtotal.toFixed(2)}`;
+  attachRemoveListeners();
 }
-renderCartItems(); // Only does something on cart page
+renderCartItems();
 
-// ====== Optional: Clear cart after checkout (you can remove this if not needed) ======
-const checkoutBtn = document.querySelector('.checkout-btn');
+// ====== Remove Items ======
+function attachRemoveListeners() {
+  document.querySelectorAll('.remove-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      const cartRow = e.target.closest('.cart-item-row');
+      const id = cartRow.getAttribute('data-id');
+
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+      cart = cart.filter(item => item.id !== id);
+      localStorage.setItem('cart', JSON.stringify(cart));
+
+      cartRow.remove();
+      renderCartItems();
+      updateCartBadge();
+    });
+  });
+}
+
+// ====== Pay & Confirm (carddetails.html) ======
+const checkoutBtn = document.querySelector('.confirm-button');
 if (checkoutBtn) {
   checkoutBtn.addEventListener('click', () => {
-    // Optional: remove this line if you want to persist cart after checkout
     localStorage.removeItem('cart');
+    localStorage.setItem('checkoutConfirmed', 'true'); // ✅ Mark as paid
+    updateCartBadge();
   });
 }
