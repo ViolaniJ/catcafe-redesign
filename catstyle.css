@@ -444,6 +444,31 @@ body.fade-in {
 
 
 /* ------------------------------------------------------- SEARCHPAGE.HTML --------------------------------------------------------------- */
+.search-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 600px;
+  margin: 0 auto 50px;
+  padding: 15px 20px;
+  border-radius: 15px;
+  background-color: #f5f5f5;
+}
+
+.search-bar i {
+  font-size: 24px;
+  color: #999;
+  margin-right: 10px;
+}
+
+.search-bar input {
+  border: none;
+  background: none;
+  font-size: 20px;
+  width: 100%;
+  font-family: 'Jua', sans-serif;
+  outline: none;
+}
 
 
 .grid-container {
@@ -792,7 +817,7 @@ body.fade-in {
   }
 }
 
-/* ------------------------------------------------------- END OF SEARCHPAGE.HTML -------------------------------------------------------- */
+/* ------------------------------------------------------- END OF SELECTDATEPAGE.HTML -------------------------------------------------------- */
 
 
 
@@ -1150,7 +1175,6 @@ body {
   margin-bottom: 15px;
 }
 
-
 .shopping-cart-section {
   font-family: 'Jua', sans-serif;
   padding: 40px ;
@@ -1221,6 +1245,7 @@ body {
   flex-shrink: 0;
 }
 
+
 .item-info {
   display: flex;
   align-items: flex-start;
@@ -1289,7 +1314,7 @@ body {
   height: 25px;
   border-radius: 50%;
   font-size: 16px;
-  cursor: pointer;
+  cursor: not-allowed;
 }
 
 .quantity-control span {
@@ -1418,6 +1443,10 @@ body {
 
 
 /* -------------------------------------------------------- CARDDETAILS.HTML ------------------------------------------------------------- */
+.card-details-section {
+  padding-top: 19px;
+}
+
 .checkout-container {
   display: flex;
   justify-content: space-between;
@@ -1481,6 +1510,8 @@ textarea {
 textarea {
   resize: none;
   margin-top: 10px;
+  border: 1px solid #000;
+  border-radius: 4px;
 }
 
 .coupon {
@@ -1491,14 +1522,20 @@ textarea {
 }
 
 .coupon img {
-  width: 24px;
-  height: 24px;
+  width: 32px;
+  height: 32px;
 }
 
 .order-summary {
   background-color: #f1f1f1;
   padding: 30px;
   border-radius: 5px;
+}
+
+.order-summary h2 {
+  border-bottom: 2px solid black;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .order-item {
@@ -1517,6 +1554,12 @@ textarea {
 
 .order-item span {
   float: right;
+}
+
+.subtotal-divider {
+  border: none;
+  border-top: 2px solid black;
+  margin: 10px 0;
 }
 
 .total-line {
