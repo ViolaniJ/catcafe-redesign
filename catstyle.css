@@ -1207,28 +1207,30 @@ body {
 .cart-header .price {
   flex: 1;
   text-align: left;
-  padding-right: 20px;
 }
 
-.cart-item {
+.cart-item-row {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
-  border-bottom: 1px solid #ddd;
   padding: 20px 0;
-  gap: 15px;
+  gap: 10px;
+}
+
+.cart-item-row > * {
+  flex-shrink: 0;
 }
 
 .item-info {
   display: flex;
   align-items: flex-start;
-  gap: 15px;
+  gap: 10px;
   flex: 2;
 }
 
 .item-info img {
   width: 60px;
-  height: 60px;
+  height: auto;
 }
 
 .item-text {
@@ -1244,10 +1246,34 @@ body {
   font-size: 12px;
 }
 
-.date {
+.item-text .date {
   font-size: 12px;
   color: #555;
   margin-top: 5px;
+}
+
+.quantity-col {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 22px;
+}
+
+.price-col {
+  flex: 0.7;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: left;
+  padding-right: 28px;
+}
+
+.remove-col {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  min-width: 40px;
 }
 
 .quantity-control {
@@ -1273,15 +1299,26 @@ body {
 }
 
 .item-price {
+  text-align: left;
   font-size: 16px;
-  flex-shrink: 0;
+  min-width: 50px;
 }
 
-.remove-btn img {
-  width: 20px;
-  height: 20px;
+.remove-btn {
+  background: none;
+  border: none;
   cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+.remove-btn .material-icons {
+  font-size: 20px;
+  color: #333;
+}
+
 
 /* Subtotal */
 .cart-subtotal {
@@ -1292,10 +1329,8 @@ body {
   width: calc(100% + 10px); /* extend 20px on each side */
   margin-left: -20px;       /* pull it back into alignment */
   border-bottom: 2px solid black;
-  padding-bottom: 10px;
   border-top: 2px solid black;
-  padding-top: 10px;
-  margin: auto 10px 20px -20px;
+  padding: 10px 0 10px 0;
 }
 
 .cart-subtotal .subtotal {

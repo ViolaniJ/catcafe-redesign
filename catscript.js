@@ -180,13 +180,22 @@ function renderCartItems() {
             <p class="date">${item.date}</p>
           </div>
         </div>
-        <div class="quantity-control">
-          <button disabled>-</button>
-          <span>${item.quantity}</span>
-          <button disabled>+</button>
+        <div class="quantity-col">
+          <div class="quantity-control">
+            <button enabled>-</button>
+            <span>${item.quantity}</span>
+            <button enabled>+</button>
+          </div>
         </div>
-        <div class="item-price">$${itemTotal.toFixed(2)}</div>
-        <button class="remove-btn"><img src="images/trash.png" alt="Delete"></button>
+        <div class="price-col">
+          $${itemTotal.toFixed(2)}
+        </div>
+
+        <div class="remove-col">
+          <button class="remove-btn">
+            <span class="material-icons">delete</span>
+          </button>
+        </div>
       </div>
     `;
     cartItemsContainer.insertAdjacentHTML('beforeend', itemHTML);
