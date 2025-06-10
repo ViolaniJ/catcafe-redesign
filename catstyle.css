@@ -61,7 +61,7 @@ body.fade-in {
   width: 100%;
   background-color: white;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  z-index: 1000;
+  z-index: 50;
   padding: 20px 0;
   text-align: center;
 }
@@ -82,21 +82,6 @@ body.fade-in {
   font-family: "Jua", sans-serif;
   font-size: 18px;
   font-weight: bold;
-}
-
-/* Responsive behavior */
-@media (max-width: 768px) {
-  .hamburger {
-    display: flex;
-  }
-
-  .navbar {
-    display: none !important;
-  }
-
-  .hamburger-menu.show {
-    display: block;
-  }
 }
 
 .site-header {
@@ -147,6 +132,7 @@ body.fade-in {
 .shoppingcart .material-icons {
   font-size: 35px;
   vertical-align: middle;
+  z-index: 100;
 }
 
 .cart-badge {
@@ -199,6 +185,21 @@ body.fade-in {
   height: auto;
   position: relative;
   top: -11px;
+}
+
+/* Responsive behavior */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .navbar {
+    display: none !important;
+  }
+
+  .hamburger-menu.show {
+    display: block;
+  }
 }
 /* ------------------------------------------------------------ END OF HEADER SECTION ----------------------------------------------------*/
 

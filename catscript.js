@@ -108,11 +108,12 @@ document.querySelectorAll(".pass-card").forEach((card) => {
         let cart = JSON.parse(localStorage.getItem("cart")) || [];
         const existingItem = cart.find((item) => item.id === id);
         if (existingItem) {
-          existingItem.quantity += quantity;
+          existingItem.quantity = 1;
           existingItem.image = image;
           existingItem.date = date;
         } else {
-          cart.push({ id, title, details, price, quantity, image, date });
+          // Always set quantity to 1 regardless of selected amount
+          cart.push({ id, title, details, price, quantity: 1, image, date });
         }
 
         localStorage.setItem("cart", JSON.stringify(cart));
