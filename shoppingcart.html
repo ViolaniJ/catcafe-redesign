@@ -1,116 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jua&display=swap"
+      rel="stylesheet"
+    />
 
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
 
-    <link rel="stylesheet" href="catstyle.css">
+    <link rel="stylesheet" href="catstyle.css" />
     <script src="catstyle.css"></script>
     <title>Cat Cafe Book a Visit</title>
-</head>
-<body>
+  </head>
+  <body>
     <header class="site-header">
+      <div class="logo-container">
+        <a href="index.html" class="catcafelogo">
+          <img
+            src="images/catcafelogo.png"
+            alt="Cat Cafe Logo"
+            class="catcafelogo"
+          />
+        </a>
+      </div>
 
-        <div class="logo-container">
-          <a href="index.html" class="catcafelogo">
-            <img src="images/catcafelogo.png" alt="Cat Cafe Logo" class="catcafelogo">
-          </a>
-        </div>
-          
-        <nav class="navbar">
-          <ul>
-            <li><a href="index.html" class="home active">Home</a></li>
-            <li><a href="#" class="aboutUs active">About Us</a></li>
-            <li><a href="bookavisit.html" class="bookAVisit active">Book A Visit</a></li>
-            <li><a href="#" class="supportUs active">Support Us</a></li>
-            <li><a href="#" class="contactUs active">Contact Us</a></li>
-            <li>
-              <a href="searchpage.html" class="search">
-                <img src="images/searchicon.png" alt="search icon" class="searchicon">
-              </a>
-            </li>
-          </ul>
-        </nav>
-    
-        <div class="header-nav">
-          <a href="shoppingcart.html" class="shoppingcart">
-            <span class="material-icons">shopping_cart</span>
-          </a>
-          <a href="#" class="profile">
-            <img src="images/profile.png" alt="Profile" class="profile">
-          </a>
-        </div>
+      <nav class="navbar">
+        <ul>
+          <li><a href="index.html" class="home active">Home</a></li>
+          <li><a href="#" class="aboutUs active">About Us</a></li>
+          <li>
+            <a href="bookavisit.html" class="bookAVisit active">Book A Visit</a>
+          </li>
+          <li><a href="#" class="supportUs active">Support Us</a></li>
+          <li><a href="#" class="contactUs active">Contact Us</a></li>
+          <li>
+            <a href="searchpage.html" class="search">
+              <img
+                src="images/searchicon.png"
+                alt="search icon"
+                class="searchicon"
+              />
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="header-nav">
+        <a href="shoppingcart.html" class="shoppingcart">
+          <span class="material-icons">shopping_cart</span>
+        </a>
+        <a href="#" class="profile">
+          <img src="images/profile.png" alt="Profile" class="profile" />
+        </a>
+      </div>
     </header>
 
     <main class="shopping-cart-page">
-        <!-- back link: update later -->
-        <section class="shopping-cart-section">
-            <div class="back-wrapper">
-                <div class="back-pass">
-                    <a href="selectpass.html" class="back-link">←</a>
-                    <a href="shoppingcart.html" class="back-visit"> Shopping Cart </a>
-                </div>
+      <!-- back link: update later -->
+      <section class="shopping-cart-section">
+        <div class="back-wrapper">
+          <div class="back-pass">
+            <a href="selectpass.html" class="back-link">←</a>
+            <a href="shoppingcart.html" class="back-visit"> Shopping Cart </a>
+          </div>
+        </div>
+
+        <div class="cart-container">
+          <a href="#" class="back-to-cart"></a>
+
+          <div class="cart-table">
+            <div class="cart-header">
+              <span class="product">PRODUCT</span>
+              <span class="quantity">QUANTITY</span>
+              <span class="price">PRICE</span>
             </div>
 
-            <div class="cart-container">
-                <a href="#" class="back-to-cart"></a>
+            <!--this part of html is developed in catscript.js-->
+            <div class="cart-items"></div>
 
-                <div class="cart-table">
-                    <div class="cart-header">
-                        <span class="product">PRODUCT</span>
-                        <span class="quantity">QUANTITY</span>
-                        <span class="price">PRICE</span>
-                    </div>
-
-                    <div class="cart-items"></div>
-
-                    <div class="cart-subtotal">
-                        <span class="subtotal">SUBTOTAL</span>
-                        <span class="subtotal-quantity"></span>
-                        <span class="subtotal-amount">$0.00</span>
-                    </div>
-                </div>
-
-                <div class="checkout-form">
-                    <h2>CONTACT INFORMATION</h2>
-                    <form>
-                        <label>First Name <span class="required">*</span><br><input type="text" required></label>
-                        <label>Last Name <span class="required">*</span><br><input type="text" required></label>
-                        <label>Email <span class="required">*</span><br><input type="email" placeholder="e.g. abcd1234@xxxx.com" required></label>
-                        <label>Phone Number <span class="required">*</span><br><input type="tel" placeholder="e.g. 04XXXXXXXX" required></label>
-                        <p class="signin-note">Already have an account? <a href="#">Sign in</a></p>
-                        <button type="submit" class="checkout-btn" onclick="window.location.href='carddetails.html'">PROCEED TO CHECKOUT</button>
-                    </form>
-                </div>
+            <div class="cart-subtotal">
+              <span class="subtotal">SUBTOTAL</span>
+              <span class="subtotal-quantity"></span>
+              <span class="subtotal-amount">$0.00</span>
             </div>
-        </section>
+          </div>
+
+          <div class="checkout-form">
+            <h2>CONTACT INFORMATION</h2>
+            <form>
+              <label
+                >First Name <span class="required">*</span><br /><input
+                  type="text"
+                  required
+              /></label>
+              <label
+                >Last Name <span class="required">*</span><br /><input
+                  type="text"
+                  required
+              /></label>
+              <label
+                >Email <span class="required">*</span><br /><input
+                  type="email"
+                  placeholder="e.g. abcd1234@xxxx.com"
+                  required
+              /></label>
+              <label
+                >Phone Number <span class="required">*</span><br /><input
+                  type="tel"
+                  placeholder="e.g. 04XXXXXXXX"
+                  required
+              /></label>
+              <p class="signin-note">
+                Already have an account? <a href="#">Sign in</a>
+              </p>
+              <button
+                type="submit"
+                class="checkout-btn"
+                onclick="window.location.href='carddetails.html'"
+              >
+                PROCEED TO CHECKOUT
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer class="site-footer">
-        <section class="footer-container">
-            <div class="footer-links">
-                <a href="#">PRIVACY POLICY</a>
-                <a href="#">BOOKING AND REFUND POLICY</a>
-                <a href="#">TERMS AND CONDITIONS</a>
-            </div>
-    
-            <div class="footer-social">
-                <p>@catcafemelbourne</p>
-                <div class="social-icons">
-                    <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
-                    <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
-                    <a href="#"><img src="images/pinterest.png" alt="Pinterest"></a>
-                </div>
-            </div>
-        </section>
+      <section class="footer-container">
+        <div class="footer-links">
+          <a href="#">PRIVACY POLICY</a>
+          <a href="#">BOOKING AND REFUND POLICY</a>
+          <a href="#">TERMS AND CONDITIONS</a>
+        </div>
+
+        <div class="footer-social">
+          <p>@catcafemelbourne</p>
+          <div class="social-icons">
+            <a href="#"><img src="images/instagram.png" alt="Instagram" /></a>
+            <a href="#"><img src="images/facebook.png" alt="Facebook" /></a>
+            <a href="#"><img src="images/pinterest.png" alt="Pinterest" /></a>
+          </div>
+        </div>
+      </section>
     </footer>
 
-<script src="catscript.js"></script>
-</body>
+    <script src="catscript.js"></script>
+  </body>
 </html>

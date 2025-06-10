@@ -1595,6 +1595,7 @@ body {
 
 .item-text {
   font-size: 14px;
+  margin-top: -10px;
 }
 
 .item-text .title {
@@ -1610,6 +1611,13 @@ body {
   font-size: 12px;
   color: #555;
   margin-top: 5px;
+}
+
+.quantity-price-remove-row {
+  display: flex;
+  flex: 2;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .quantity-col {
@@ -1699,7 +1707,6 @@ body {
 
 .cart-subtotal .subtotal-quantity {
   flex: 1;
-  /* leave blank — this is for alignment only */
 }
 
 .cart-subtotal .subtotal-amount {
@@ -1782,15 +1789,31 @@ body {
   }
 
   .cart-header {
-    display: none; /* hide table header on mobile */
+    font-size: 14px;
+    margin-left: 0;
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  .cart-header .product {
+    flex: 2;
+    padding-left: 10px;
+  }
+
+  .cart-header .quantity,
+  .cart-header .price {
+    flex: 1;
+    text-align: center;
   }
 
   .cart-item-row {
     flex-direction: column;
     align-items: flex-start;
+    flex-direction: row;
     width: 100%;
     border-bottom: 1px solid #ccc;
     padding: 20px 0;
+    gap: 12px;
   }
 
   .item-info {
@@ -1800,25 +1823,59 @@ body {
   }
 
   .item-text {
-    flex: 1;
+    flex: 0.3;
+  }
+
+  .item-info img {
+    margin-bottom: 150px;
+  }
+
+  .quantity-price-remove-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-top: 15px;
+    margin-left: -20px;
+    width: 100%;
+    padding: 0 10px;
   }
 
   .quantity-col,
   .price-col,
   .remove-col {
-    width: 100%;
-    justify-content: space-between;
-    padding: 10px 0;
+    display: flex;
+    align-items: center;
   }
 
   .quantity-col {
+    flex: 1.2;
     justify-content: flex-start;
-    padding-left: 0;
+  }
+
+  .quantity-control button {
+    background: #d9d9d9;
+    border: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    font-size: 14px;
+    cursor: pointer; /* optional: change from not-allowed if buttons are working now */
   }
 
   .price-col {
+    flex: 0.8;
+    justify-content: center;
+  }
+
+  .remove-col {
+    align-self: center;
+    margin-left: -70px;
+    margin-top: 8px;
+    display: flex;
     justify-content: flex-start;
-    padding-right: 0;
+    width: 100%;
   }
 
   .cart-subtotal {

@@ -169,14 +169,16 @@ function renderCartItems() {
             <p class="date">${item.date}</p>
           </div>
         </div>
-        <div class="quantity-col">
-          <div class="quantity-control">
-            <button>-</button>
-            <span>${item.quantity}</span>
-            <button>+</button>
+        <div class="quantity-price-remove-row">
+          <div class="quantity-col">
+            <div class="quantity-control">
+              <button>-</button>
+              <span>${item.quantity}</span>
+              <button>+</button>
+            </div>
           </div>
+          <div class="price-col">$${itemTotal.toFixed(2)}</div>
         </div>
-        <div class="price-col">$${itemTotal.toFixed(2)}</div>
         <div class="remove-col">
           <button class="remove-btn"><span class="material-icons">delete</span></button>
         </div>
