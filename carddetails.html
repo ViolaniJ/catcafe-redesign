@@ -1,145 +1,209 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jua&display=swap"
+      rel="stylesheet"
+    />
 
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
 
-    <link rel="stylesheet" href="catstyle.css">
+    <link rel="stylesheet" href="catstyle.css" />
     <script src="catstyle.css"></script>
     <title>Cat Cafe Book a Visit</title>
-</head>
-<body>
+  </head>
+  <body>
     <header class="site-header">
+      <div class="logo-container">
+        <a href="index.html" class="catcafelogo">
+          <img
+            src="images/catcafelogo.png"
+            alt="Cat Cafe Logo"
+            class="catcafelogo"
+          />
+        </a>
+      </div>
 
-        <div class="logo-container">
-          <a href="index.html" class="catcafelogo">
-            <img src="images/catcafelogo.png" alt="Cat Cafe Logo" class="catcafelogo">
-          </a>
-        </div>
-          
-        <nav class="navbar">
-          <ul>
-            <li><a href="index.html" class="home active">Home</a></li>
-            <li><a href="#" class="aboutUs active">About Us</a></li>
-            <li><a href="bookavisit.html" class="bookAVisit active">Book A Visit</a></li>
-            <li><a href="#" class="supportUs active">Support Us</a></li>
-            <li><a href="#" class="contactUs active">Contact Us</a></li>
-            <li>
-              <a href="searchpage.html" class="search">
-                <img src="images/searchicon.png" alt="search icon" class="searchicon">
-              </a>
-            </li>
-          </ul>
-        </nav>
-    
-        <div class="header-nav">
-          <a href="shoppingcart.html" class="shoppingcart">
-            <span class="material-icons">shopping_cart</span>
-          </a>
-          <a href="#" class="profile">
-            <img src="images/profile.png" alt="Profile" class="profile">
-          </a>
-        </div>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <div class="hamburger-menu" id="hamburgerMenu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="bookavisit.html">Book A Visit</a></li>
+          <li><a href="#">Support Us</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li>
+            <a href="searchpage.html"
+              ><img
+                src="images/searchicon.png"
+                alt="search icon"
+                class="searchicon"
+            /></a>
+          </li>
+        </ul>
+      </div>
+
+      <nav class="navbar">
+        <ul>
+          <li><a href="index.html" class="home active">Home</a></li>
+          <li><a href="#" class="aboutUs active">About Us</a></li>
+          <li>
+            <a href="bookavisit.html" class="bookAVisit active">Book A Visit</a>
+          </li>
+          <li><a href="#" class="supportUs active">Support Us</a></li>
+          <li><a href="#" class="contactUs active">Contact Us</a></li>
+          <li>
+            <a href="searchpage.html" class="search">
+              <img
+                src="images/searchicon.png"
+                alt="search icon"
+                class="searchicon"
+              />
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="header-nav">
+        <a href="shoppingcart.html" class="shoppingcart">
+          <span class="material-icons">shopping_cart</span>
+        </a>
+        <a href="#" class="profile">
+          <img src="images/profile.png" alt="Profile" class="profile" />
+        </a>
+      </div>
     </header>
 
     <main>
-        <section class="card-details-section">
-            <div class="back-home">
-                <a href="shoppingcart.html" class="back-link">←</a>
-                <a href="shoppingcart.html" class="back-choose">Shopping Cart</a>
-                <span class="divider"> |</span>
-                <a href="carddetails.html" class="back-visit">Checkout</a>
+      <section class="card-details-section">
+        <div class="back-shop">
+          <a href="shoppingcart.html" class="back-link">←</a>
+          <a href="shoppingcart.html" class="back-choose">Shopping Cart</a>
+          <span class="divider"> |</span>
+          <a href="carddetails.html" class="back-visit">Checkout</a>
+        </div>
+
+        <div class="checkout-container">
+          <section class="payment-info">
+            <h2>PAYMENT INFORMATION</h2>
+
+            <label for="first-name"
+              >FIRST NAME <span class="required">*</span></label
+            >
+            <input type="text" id="first-name" placeholder="Lilie" />
+
+            <label for="last-name"
+              >LAST NAME <span class="required">*</span></label
+            >
+            <input type="text" id="last-name" placeholder="Smith" />
+
+            <div class="coupon">
+              <img src="images/coupon.png" alt="Coupon Icon" />
+              <input type="text" placeholder="ENTER COUPON CODE" />
             </div>
-        
-            <div class="checkout-container">
-                <section class="payment-info">
 
-                    <h2>PAYMENT INFORMATION</h2>
+            <label for="order-notes">ORDER NOTES (OPTIONAL)</label>
+            <textarea id="order-notes" rows="4"></textarea>
+          </section>
 
-                    <label for="first-name">FIRST NAME <span class="required">*</span></label>
-                    <input type="text" id="first-name" placeholder="Lilie">
-
-                    <label for="last-name">LAST NAME <span class="required">*</span></label>
-                    <input type="text" id="last-name" placeholder="Smith">
-
-                    <div class="coupon">
-                        <img src="images/coupon.png" alt="Coupon Icon">
-                        <input type="text" placeholder="ENTER COUPON CODE">
-                    </div>
-
-                    <label for="order-notes">ORDER NOTES (OPTIONAL)</label>
-                    <textarea id="order-notes" rows="4"></textarea>
-                </section>
-
-                <section class="order-summary">
-                    <h2>ORDER SUMMARY</h2>
-                    <div class="order-item">
-                        <p><strong>1x GENERAL VISIT SESSION</strong><span>AUD$19.0</span></p>
-                        <p>1 HOUR PASS<br>Entry Only</p>
-                        <p>Friday, 18th April, 2025<br>@ 1:00 PM (GMT+10)</p>
-                    </div>
-                    <div class="order-item">
-                        <p><strong>1x GENERAL VISIT SESSION</strong><span>AUD$24.50</span></p>
-                        <p>1 HOUR PASS<br>+ Hot Coffee OR Chocolate OR Tea</p>
-                        <p>Friday, 18th April, 2025<br>@ 1:00 PM (GMT+10)</p>
-                    </div>
-                    <hr>
-                    <p class="total-line">SUBTOTAL <span>AUD$43.50</span></p>
-                    <hr class="subtotal-divider">
-                    <p class="total-line total">TOTAL DUE <span>AUD$43.50</span></p>
-                </section>
-
-                <section class="card-info">
-                    <h2>CREDIT OR DEBIT CARD</h2>
-                    <label for="card-number">CARD NUMBER <span class="required">*</span></label>
-                    <input type="text" id="card-number" placeholder="1234 1234 1234 1234">
-
-                    <div class="card-details">
-                        <div>
-                            <label for="expiry">EXPIRATION DATE <span class="required">*</span></label>
-                            <input type="text" id="expiry" placeholder="MM/YY">
-                        </div>
-                        <div>
-                            <label for="cvc">SECURITY CODE <span class="required">*</span></label>
-                            <input type="text" id="cvc" placeholder="CVC">
-                        </div>
-                    </div>
-
-                    <div class="checkbox">
-                        <input type="checkbox" id="agree">
-                        <label for="agree">I have read and agree to the website <a href="#">terms and conditions</a></label>
-                    </div>
-
-                    <button class="confirm-button" onclick="window.location.href='bookingconfirmation.html'">PAY & CONFIRM</button>
-                </section>
+          <section class="order-summary">
+            <h2>ORDER SUMMARY</h2>
+            <div class="order-item">
+              <p>
+                <strong>1x GENERAL VISIT SESSION</strong><span>AUD$19.0</span>
+              </p>
+              <p>1 HOUR PASS<br />Entry Only</p>
+              <p>Friday, 18th April, 2025<br />@ 1:00 PM (GMT+10)</p>
             </div>
-        </section>
+            <div class="order-item">
+              <p>
+                <strong>1x GENERAL VISIT SESSION</strong><span>AUD$24.50</span>
+              </p>
+              <p>1 HOUR PASS<br />+ Hot Coffee OR Chocolate OR Tea</p>
+              <p>Friday, 18th April, 2025<br />@ 1:00 PM (GMT+10)</p>
+            </div>
+            <hr />
+            <p class="total-line">SUBTOTAL <span>AUD$43.50</span></p>
+            <hr class="subtotal-divider" />
+            <p class="total-line total">TOTAL DUE <span>AUD$43.50</span></p>
+          </section>
+
+          <section class="card-info">
+            <h2>CREDIT OR DEBIT CARD</h2>
+            <label for="card-number"
+              >CARD NUMBER <span class="required">*</span></label
+            >
+            <input
+              type="text"
+              id="card-number"
+              placeholder="1234 1234 1234 1234"
+            />
+
+            <div class="card-details">
+              <div>
+                <label for="expiry"
+                  >EXPIRATION DATE <span class="required">*</span></label
+                >
+                <input type="text" id="expiry" placeholder="MM/YY" />
+              </div>
+              <div>
+                <label for="cvc"
+                  >SECURITY CODE <span class="required">*</span></label
+                >
+                <input type="text" id="cvc" placeholder="CVC" />
+              </div>
+            </div>
+
+            <div class="checkbox">
+              <input type="checkbox" id="agree" />
+              <label for="agree"
+                >I have read and agree to the website
+                <a href="#">terms and conditions</a></label
+              >
+            </div>
+
+            <button
+              class="confirm-button"
+              onclick="window.location.href='bookingconfirmation.html'"
+            >
+              PAY & CONFIRM
+            </button>
+          </section>
+        </div>
+      </section>
     </main>
 
     <footer class="site-footer">
-        <section class="footer-container">
-            <div class="footer-links">
-                <a href="#">PRIVACY POLICY</a>
-                <a href="#">BOOKING AND REFUND POLICY</a>
-                <a href="#">TERMS AND CONDITIONS</a>
-            </div>
-    
-            <div class="footer-social">
-                <p>@catcafemelbourne</p>
-                <div class="social-icons">
-                    <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
-                    <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
-                    <a href="#"><img src="images/pinterest.png" alt="Pinterest"></a>
-                </div>
-            </div>
-        </section>
+      <section class="footer-container">
+        <div class="footer-links">
+          <a href="#">PRIVACY POLICY</a>
+          <a href="#">BOOKING AND REFUND POLICY</a>
+          <a href="#">TERMS AND CONDITIONS</a>
+        </div>
+
+        <div class="footer-social">
+          <p>@catcafemelbourne</p>
+          <div class="social-icons">
+            <a href="#"><img src="images/instagram.png" alt="Instagram" /></a>
+            <a href="#"><img src="images/facebook.png" alt="Facebook" /></a>
+            <a href="#"><img src="images/pinterest.png" alt="Pinterest" /></a>
+          </div>
+        </div>
+      </section>
     </footer>
 
-<script src="catscript.js"></script>
-</body>
+    <script src="catscript.js"></script>
+  </body>
 </html>

@@ -1779,7 +1779,7 @@ body {
 
 @media (max-width: 768px) {
   .back-wrapper {
-    margin: -15px auto -20px 0;
+    margin: -15px auto -20px -15px;
   }
 
   .back-pass {
@@ -1870,7 +1870,6 @@ body {
     height: 20px;
     border-radius: 50%;
     font-size: 14px;
-    cursor: pointer; /* optional: change from not-allowed if buttons are working now */
   }
 
   .price-col {
@@ -1929,6 +1928,15 @@ body {
 /* ----------------------------------------------------END OF SHOPPINGCART.HTML ---------------------------------------------------------- */
 
 /* -------------------------------------------------------- CARDDETAILS.HTML ------------------------------------------------------------- */
+.back-shop {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: 60px;
+  margin-top: -20px;
+  margin-bottom: 15px;
+}
+
 .card-details-section {
   padding-top: 19px;
 }
@@ -2108,6 +2116,17 @@ textarea {
 
 .confirm-button:hover {
   background-color: #256328;
+}
+
+@media (max-width: 768px) {
+  .back-shop {
+    margin-left: 25px;
+    margin-top: 10px;
+  }
+
+  .checkout-container {
+    margin-top: -50px;
+  }
 }
 
 /* ----------------------------------------------------- END OF CARDDETAILS.HTML --------------------------------------------------------- */
