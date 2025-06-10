@@ -1,180 +1,218 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jua&display=swap"
+      rel="stylesheet"
+    />
 
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
 
-    <link rel="stylesheet" href="catstyle.css">
+    <link rel="stylesheet" href="catstyle.css" />
     <title>Cat Cafe Book a Visit</title>
-</head>
-<body>
+  </head>
+  <body>
     <header class="site-header">
+      <div class="logo-container">
+        <a href="index.html" class="catcafelogo">
+          <img
+            src="images/catcafelogo.png"
+            alt="Cat Cafe Logo"
+            class="catcafelogo"
+          />
+        </a>
+      </div>
 
-        <div class="logo-container">
-          <a href="index.html" class="catcafelogo">
-            <img src="images/catcafelogo.png" alt="Cat Cafe Logo" class="catcafelogo">
-          </a>
-        </div>
-          
-        <nav class="navbar">
-          <ul>
-            <li><a href="index.html" class="home active">Home</a></li>
-            <li><a href="#" class="aboutUs active">About Us</a></li>
-            <li><a href="bookavisit.html" class="bookAVisit active">Book A Visit</a></li>
-            <li><a href="#" class="supportUs active">Support Us</a></li>
-            <li><a href="#" class="contactUs active">Contact Us</a></li>
-            <li>
-              <a href="searchpage.html" class="search">
-                <img src="images/searchicon.png" alt="search icon" class="searchicon">
-              </a>
-            </li>
-          </ul>
-        </nav>
-    
-        <div class="header-nav">
-          <a href="shoppingcart.html" class="shoppingcart">
-            <span class="material-icons">shopping_cart</span>
-          </a>
-          <a href="#" class="profile">
-            <img src="images/profile.png" alt="Profile" class="profile">
-          </a>
-        </div>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <div class="hamburger-menu" id="hamburgerMenu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="bookavisit.html">Book A Visit</a></li>
+          <li><a href="#">Support Us</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li>
+            <a href="searchpage.html"
+              ><img
+                src="images/searchicon.png"
+                alt="search icon"
+                class="searchicon"
+            /></a>
+          </li>
+        </ul>
+      </div>
+
+      <nav class="navbar">
+        <ul>
+          <li><a href="index.html" class="home active">Home</a></li>
+          <li><a href="#" class="aboutUs active">About Us</a></li>
+          <li>
+            <a href="bookavisit.html" class="bookAVisit active">Book A Visit</a>
+          </li>
+          <li><a href="#" class="supportUs active">Support Us</a></li>
+          <li><a href="#" class="contactUs active">Contact Us</a></li>
+          <li>
+            <a href="searchpage.html" class="search">
+              <img
+                src="images/searchicon.png"
+                alt="search icon"
+                class="searchicon"
+              />
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="header-nav">
+        <a href="shoppingcart.html" class="shoppingcart">
+          <span class="material-icons">shopping_cart</span>
+        </a>
+        <a href="#" class="profile">
+          <img src="images/profile.png" alt="Profile" class="profile" />
+        </a>
+      </div>
     </header>
 
     <main class="selectdate page">
-        <section class="select-a-date">
-        
-            <div class="back-home">
-                <a href="bookavisit.html" class="back-link">←</a>
-                <a href="bookavisit.html" class="back-choose">Book A Visit</a>
-                <span class="divider"> |</span>
-                <a href="selectdate.html" class="back-visit">General Visit Session</a>
-            </div>
+      <section class="select-a-date">
+        <div class="back-home">
+          <a href="bookavisit.html" class="back-link">←</a>
+          <a href="bookavisit.html" class="back-choose">Book A Visit</a>
+          <span class="divider"> |</span>
+          <a href="selectdate.html" class="back-visit">General Visit Session</a>
+        </div>
 
-            <h1>
-              <img src="images/brownpaw.png" alt="cat paw" class="paw">
-              GENERAL VISIT SESSION
-              <img src="images/brownpaw.png" alt="cat paw" class="paw">
-            </h1>
-            <p>Select a date to see available times</p>
+        <h1>
+          <img src="images/brownpaw.png" alt="cat paw" class="paw" />
+          GENERAL VISIT SESSION
+          <img src="images/brownpaw.png" alt="cat paw" class="paw" />
+        </h1>
+        <p>Select a date to see available times</p>
 
-            <div class="booking-layout">
-              <div class="calendar-container">
-                <div class="calendar-box">
-                  <div class="calendar-header">
-                    <span class="arrow">◀</span>
-                    <span class="month-title">APRIL 2025</span>
-                    <span class="arrow">▶</span>
-                  </div>
-                  <div class="calendar-weekdays">
-                    <div>M</div>
-                    <div>T</div>
-                    <div>W</div>
-                    <div>T</div>
-                    <div>F</div>
-                    <div>S</div>
-                    <div>S</div>
-                  </div>
-                  <div class="calendar-grid">
-                    <div class="calendar-day disabled">31</div>
-                    <div class="dimmed">1</div>
-                    <div class="dimmed">2</div>
-                    <div class="dimmed">3</div>
-                    <div class="dimmed">4</div>
-                    <div class="dimmed">5</div>
-                    <div class="dimmed">6</div>
-                    <div class="dimmed">7</div>
-                    <div class="dimmed">8</div>
-                    <div class="dimmed">9</div>
-                    <div class="dimmed">10</div>
-                    <div class="dimmed">11</div>
-                    <div class="dimmed">12</div>
-                    <div class="dimmed">13</div>
-                    <div class="dimmed">14</div>
-                    <div class="dimmed">15</div>
-                    <div class="dimmed">16</div>
-                    <div class="dimmed">17</div>
-                    <div class="calendar-day selectable">18</div>
-                    <div class="calendar-day">19</div>
-                    <div class="calendar-day">20</div>
-                    <div class="calendar-day">21</div>
-                    <div class="calendar-day">22</div>
-                    <div class="calendar-day">23</div>
-                    <div class="calendar-day">24</div>
-                    <div class="calendar-day">25</div>
-                    <div class="calendar-day">26</div>
-                    <div class="calendar-day">27</div>
-                    <div class="calendar-day">28</div>
-                    <div class="calendar-day">29</div>
-                    <div class="calendar-day">30</div>
-                    <div class="calendar-day disabled">1</div>
-                    <div class="calendar-day disabled">2</div>
-                    <div class="calendar-day disabled">3</div>
-                    <div class="calendar-day disabled">4</div>
-                  </div>
-                  
-                  <div class="calendar-line line-1"></div>
-                  <div class="calendar-line line-2"></div>
-                  <div class="calendar-line line-3"></div>
-                </div>
+        <div class="booking-layout">
+          <div class="calendar-container">
+            <div class="calendar-box">
+              <div class="calendar-header">
+                <span class="arrow">◀</span>
+                <span class="month-title">APRIL 2025</span>
+                <span class="arrow">▶</span>
+              </div>
+              <div class="calendar-weekdays">
+                <div>M</div>
+                <div>T</div>
+                <div>W</div>
+                <div>T</div>
+                <div>F</div>
+                <div>S</div>
+                <div>S</div>
+              </div>
+              <div class="calendar-grid">
+                <div class="calendar-day disabled">31</div>
+                <div class="dimmed">1</div>
+                <div class="dimmed">2</div>
+                <div class="dimmed">3</div>
+                <div class="dimmed">4</div>
+                <div class="dimmed">5</div>
+                <div class="dimmed">6</div>
+                <div class="dimmed">7</div>
+                <div class="dimmed">8</div>
+                <div class="dimmed">9</div>
+                <div class="dimmed">10</div>
+                <div class="dimmed">11</div>
+                <div class="dimmed">12</div>
+                <div class="dimmed">13</div>
+                <div class="dimmed">14</div>
+                <div class="dimmed">15</div>
+                <div class="dimmed">16</div>
+                <div class="dimmed">17</div>
+                <div class="calendar-day selectable">18</div>
+                <div class="calendar-day">19</div>
+                <div class="calendar-day">20</div>
+                <div class="calendar-day">21</div>
+                <div class="calendar-day">22</div>
+                <div class="calendar-day">23</div>
+                <div class="calendar-day">24</div>
+                <div class="calendar-day">25</div>
+                <div class="calendar-day">26</div>
+                <div class="calendar-day">27</div>
+                <div class="calendar-day">28</div>
+                <div class="calendar-day">29</div>
+                <div class="calendar-day">30</div>
+                <div class="calendar-day disabled">1</div>
+                <div class="calendar-day disabled">2</div>
+                <div class="calendar-day disabled">3</div>
+                <div class="calendar-day disabled">4</div>
               </div>
 
-              <div class="timeslots">
-                <div class="slot-wrap">
-                  <button class="slot sold-out">12:00 PM</button>
-                  <p class="slot-status">Sold out</p>
-                </div>
-
-                <div class="slot-wrap">
-                  <button class="slot available" id="slot-1pm">1:00 PM</button>
-                  <p class="slot-status">(8 left)</p>
-                </div>
-
-                <div class="slot-wrap">
-                  <button class="slot not-available">2:00 PM</button>
-                </div>
-
-                <div class="slot-wrap">
-                  <button class="slot not-available">3:00 PM</button>
-                  <p class="slot-status">(23 left)</p>
-                </div>
-
-                <div class="slot-wrap">
-                  <button class="slot not-available">4:00 PM</button>
-                </div>
-              </div> 
-            </div>     
-
-            <div class="next-btn-container">
-              <a href="selectpass.html" class="next-button">NEXT ></a>
+              <div class="calendar-line line-1"></div>
+              <div class="calendar-line line-2"></div>
+              <div class="calendar-line line-3"></div>
             </div>
-        </section>
+          </div>
+
+          <div class="timeslots">
+            <div class="slot-wrap">
+              <button class="slot sold-out">12:00 PM</button>
+              <p class="slot-status">Sold out</p>
+            </div>
+
+            <div class="slot-wrap">
+              <button class="slot available" id="slot-1pm">1:00 PM</button>
+              <p class="slot-status">(8 left)</p>
+            </div>
+
+            <div class="slot-wrap">
+              <button class="slot not-available">2:00 PM</button>
+            </div>
+
+            <div class="slot-wrap">
+              <button class="slot not-available">3:00 PM</button>
+              <p class="slot-status">(23 left)</p>
+            </div>
+
+            <div class="slot-wrap">
+              <button class="slot not-available">4:00 PM</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="next-btn-container">
+          <a href="selectpass.html" class="next-button">NEXT ></a>
+        </div>
+      </section>
     </main>
 
     <footer class="site-footer">
-        <section class="footer-container">
-          <div class="footer-links">
-            <a href="#">PRIVACY POLICY</a>
-            <a href="#">BOOKING AND REFUND POLICY</a>
-            <a href="#">TERMS AND CONDITIONS</a>
+      <section class="footer-container">
+        <div class="footer-links">
+          <a href="#">PRIVACY POLICY</a>
+          <a href="#">BOOKING AND REFUND POLICY</a>
+          <a href="#">TERMS AND CONDITIONS</a>
+        </div>
+
+        <div class="footer-social">
+          <p>@catcafemelbourne</p>
+          <div class="social-icons">
+            <a href="#"><img src="images/instagram.png" alt="Instagram" /></a>
+            <a href="#"><img src="images/facebook.png" alt="Facebook" /></a>
+            <a href="#"><img src="images/pinterest.png" alt="Pinterest" /></a>
           </div>
-      
-          <div class="footer-social">
-            <p>@catcafemelbourne</p>
-              <div class="social-icons">
-                <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
-                <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
-                <a href="#"><img src="images/pinterest.png" alt="Pinterest"></a>
-              </div>
-          </div>
-        </section>
+        </div>
+      </section>
     </footer>
 
-<script src="catscript.js"></script>
-</body>
+    <script src="catscript.js"></script>
+  </body>
 </html>
