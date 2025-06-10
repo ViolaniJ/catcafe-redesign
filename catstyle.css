@@ -737,6 +737,42 @@ body.fade-in {
   border-radius: 16px;
   gap: 100px;
 }
+
+@media (max-width: 768px) {
+  /* Search bar shrink */
+  .search-bar {
+    padding: 15px 15px;
+    margin: 30px auto 30px;
+    max-width: 90%;
+  }
+
+  .search-bar input {
+    font-size: 16px;
+  }
+
+  .search-bar i {
+    font-size: 20px;
+    margin-right: 8px;
+  }
+
+  /* Grid becomes 2 columns */
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin: 40px auto;
+    padding: 0 10px;
+  }
+
+  .grid-item img {
+    border-radius: 12px;
+  }
+
+  .grid-item p {
+    font-size: 14px;
+    text-align: center;
+  }
+}
+
 /* ------------------------------------------------------ END OF SEARCHPAGE.HTML --------------------------------------------------------- */
 
 /* -------------------------------------------------------- SELECTADATE.HTML ------------------------------------------------------------- */
