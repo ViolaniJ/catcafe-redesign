@@ -1778,9 +1778,18 @@ body {
 }
 
 @media (max-width: 768px) {
+  .back-wrapper {
+    margin: -15px auto -20px 0;
+  }
+
+  .back-pass {
+    margin-bottom: 0px;
+  }
+
   .cart-container {
     flex-direction: column;
     align-items: center;
+    margin-top: 0;
   }
 
   .cart-table {
