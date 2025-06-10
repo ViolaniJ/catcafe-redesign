@@ -448,7 +448,7 @@ body.fade-in {
   }
 
   .welcomecat {
-    width: 90%;
+    width: 100%;
     top: 0;
   }
 
@@ -456,7 +456,7 @@ body.fade-in {
     position: absolute;
     bottom: 18px;
     right: 30%; /* shift the button more to the left */
-    transform: translateX(65%); /* pull it back right to center visually */
+    transform: translateX(70%); /* pull it back right to center visually */
     font-size: 11px;
     padding: 6px 12px;
     border-radius: 14px;
@@ -658,9 +658,9 @@ body.fade-in {
 @media (max-width: 768px) {
   /* Back button spacing */
   .back-home {
-    margin-left: 10px;
+    margin-left: 5px;
     margin-top: -10px;
-    gap: 4px;
+    gap: 5px;
   }
 
   .back-link {
@@ -1085,6 +1085,10 @@ body.fade-in {
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
+  .back-choose {
+    font-size: 14px;
+  }
+
   .select-a-date h1 {
     font-size: 24px;
     gap: 6px;
@@ -1181,36 +1185,13 @@ body {
   margin-right: 10px;
 }
 
-@media (max-width: 1024px) {
-  .booking-menu {
-    margin-right: 40px;
-  }
-}
-
-@media (max-width: 768px) {
-  .booking-layout {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .booking-menu {
-    margin-right: 0;
-    margin-bottom: 20px;
-    text-align: center;
-  }
-
-  .booking-options-scroll {
-    width: 100%;
-  }
-}
-
 .booking-options-scroll {
   max-height: 520px;
   overflow-y: auto;
   overflow-x: hidden;
   flex-shrink: 1;
   width: auto;
-  padding-right: 8px;
+  padding-right: 6px;
 }
 
 .booking-options {
@@ -1451,7 +1432,8 @@ body {
   width: 100%;
 }
 
-.prev {
+.prev,
+.next-button2 {
   font-family: "Jua", sans-serif;
   font-size: 16px;
   background-color: #a86635;
@@ -1463,8 +1445,53 @@ body {
   transition: background 0.2s ease;
 }
 
-.prev:hover {
+.prev {
+  justify-content: flex-start;
+}
+
+.prev:hover,
+.next-button2:hover {
   background-color: #8e4c27;
+}
+
+@media (max-width: 768px) {
+  .booking-layout {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .booking-menu {
+    margin-bottom: 20px;
+    margin-top: -30px;
+    text-align: center;
+  }
+
+  .booking-options-scroll {
+    width: 100%;
+    justify-items: center;
+    align-items: center;
+  }
+
+  .booking-options {
+    padding-right: -20px;
+    padding-left: 30px; /* Try 0 or a smaller value */
+  }
+
+  .cart-badge {
+    top: 35px;
+    right: 50px;
+  }
+
+  .selectpass-back-home {
+    margin-left: 20px;
+    margin-top: 20px;
+  }
+
+  .prev,
+  .next-button2 {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
 }
 /* ------------------------------------------------------- END OF SELECTPASS.HTML -------------------------------------------------------- */
 
@@ -1741,6 +1768,96 @@ body {
 
 .checkout-btn:hover {
   background-color: #003922;
+}
+
+@media (max-width: 768px) {
+  .cart-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cart-table {
+    min-width: unset;
+    width: 100%;
+  }
+
+  .cart-header {
+    display: none; /* hide table header on mobile */
+  }
+
+  .cart-item-row {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+    padding: 20px 0;
+  }
+
+  .item-info {
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .item-text {
+    flex: 1;
+  }
+
+  .quantity-col,
+  .price-col,
+  .remove-col {
+    width: 100%;
+    justify-content: space-between;
+    padding: 10px 0;
+  }
+
+  .quantity-col {
+    justify-content: flex-start;
+    padding-left: 0;
+  }
+
+  .price-col {
+    justify-content: flex-start;
+    padding-right: 0;
+  }
+
+  .cart-subtotal {
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-size: 16px;
+    width: 100%;
+    margin-left: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .cart-subtotal .subtotal {
+    flex: 1;
+    padding-left: 0;
+  }
+
+  .cart-subtotal .subtotal-quantity {
+    display: none;
+  }
+
+  .cart-subtotal .subtotal-amount {
+    flex: 1;
+    text-align: right;
+    padding-right: 0;
+  }
+
+  .checkout-form {
+    max-width: 100%;
+    padding: 20px;
+  }
+
+  .checkout-form input {
+    font-size: 14px;
+  }
+
+  .checkout-btn {
+    font-size: 16px;
+  }
 }
 
 /* ----------------------------------------------------END OF SHOPPINGCART.HTML ---------------------------------------------------------- */
