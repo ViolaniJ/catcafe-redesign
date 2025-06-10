@@ -2168,9 +2168,11 @@ textarea {
   padding: 0 20px;
 }
 
-.paw {
+.paws1,
+.paws2 {
   width: 40px;
   height: auto;
+  margin: 0 50px;
   vertical-align: middle;
 }
 
@@ -2189,6 +2191,34 @@ textarea {
 
 .back-home-link:hover {
   text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .email-note {
+    font-size: 18px;
+    padding: 0 10px;
+    flex-direction: column;
+    margin-top: -10px;
+    margin-bottom: 20px;
+  }
+
+  .paws1 {
+    margin-top: 20px;
+  }
+
+  .confirmation-wrapper {
+    padding: 20px 10px;
+  }
+
+  .thank-you-message {
+    font-size: 18px;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .back-home-link {
+    font-size: 14px;
+  }
 }
 
 /* --------------------------------------------------- END OF BOOKINGCONFIRMATION.HTML --------------------------------------------------- */
