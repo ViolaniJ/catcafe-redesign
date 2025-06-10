@@ -1,105 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jua&display=swap"
+      rel="stylesheet"
+    />
 
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
 
-    <link rel="stylesheet" href="catstyle.css">
+    <link rel="stylesheet" href="catstyle.css" />
     <title>Cat Cafe Book a Visit</title>
-</head>
-<body>
+  </head>
+  <body>
     <header class="site-header">
+      <div class="logo-container">
+        <a href="index.html" class="catcafelogo">
+          <img
+            src="images/catcafelogo.png"
+            alt="Cat Cafe Logo"
+            class="catcafelogo"
+          />
+        </a>
+      </div>
+
+      <div class="mobile-header">
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
 
         <div class="logo-container">
           <a href="index.html" class="catcafelogo">
-            <img src="images/catcafelogo.png" alt="Cat Cafe Logo" class="catcafelogo">
+            <img
+              src="images/catcafelogo.png"
+              alt="Cat Cafe Logo"
+              class="catcafelogo"
+            />
           </a>
+          <div class="header-nav">
+            <a href="shoppingcart.html" class="shoppingcart">
+              <span class="material-icons">shopping_cart</span>
+            </a>
+            <a href="#" class="profile">
+              <img src="images/profile.png" alt="Profile" class="profile" />
+            </a>
+          </div>
         </div>
-          
-        <nav class="navbar">
+
+        <div class="hamburger-menu" id="hamburgerMenu">
           <ul>
-            <li><a href="index.html" class="home active">Home</a></li>
-            <li><a href="#" class="aboutUs active">About Us</a></li>
-            <li><a href="bookavisit.html" class="bookAVisit active">Book A Visit</a></li>
-            <li><a href="#" class="supportUs active">Support Us</a></li>
-            <li><a href="#" class="contactUs active">Contact Us</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="bookavisit.html">Book A Visit</a></li>
+            <li><a href="#">Support Us</a></li>
+            <li><a href="#">Contact Us</a></li>
             <li>
-              <a href="searchpage.html" class="search">
-                <img src="images/searchicon.png" alt="search icon" class="searchicon">
-              </a>
+              <a href="searchpage.html"
+                ><img
+                  src="images/searchicon.png"
+                  alt="search icon"
+                  class="searchicon"
+              /></a>
             </li>
           </ul>
-        </nav>
-    
-        <div class="header-nav">
-          <a href="shoppingcart.html" class="shoppingcart">
-            <span class="material-icons">shopping_cart</span>
-          </a>
-          <a href="#" class="profile">
-            <img src="images/profile.png" alt="Profile" class="profile">
-          </a>
         </div>
+      </div>
+
+      <nav class="navbar">
+        <ul>
+          <li><a href="index.html" class="home active">Home</a></li>
+          <li><a href="#" class="aboutUs active">About Us</a></li>
+          <li>
+            <a href="bookavisit.html" class="bookAVisit active">Book A Visit</a>
+          </li>
+          <li><a href="#" class="supportUs active">Support Us</a></li>
+          <li><a href="#" class="contactUs active">Contact Us</a></li>
+          <li>
+            <a href="searchpage.html" class="search">
+              <img
+                src="images/searchicon.png"
+                alt="search icon"
+                class="searchicon"
+              />
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="header-nav">
+        <a href="shoppingcart.html" class="shoppingcart">
+          <span class="material-icons">shopping_cart</span>
+        </a>
+        <a href="#" class="profile">
+          <img src="images/profile.png" alt="Profile" class="profile" />
+        </a>
+      </div>
     </header>
 
     <main>
-        <div class="search-bar">
-          <i class="material-icons">search</i>
-          <input type="search" placeholder="Search" class="search-input">
-        </div>
-    
-        <div class="grid-container">
-            <a href="#" class="grid-item">
-              <img src="images/about-us.png" alt="About Us">
-            </a>
-            <a href="bookavisit.html" class="grid-item">
-              <img src="images/book-a-visit.png" alt="Book A Visit">
-            </a>
-            <a href="#" class="grid-item">
-              <img src="images/exclusive-private-session.png" alt="Exclusive Private Session">
-            </a>
-            <a href="#" class="grid-item">
-              <img src="images/gift-voucher.png" alt="Gift Voucher">
-            </a>
-            <a href="#" class="grid-item">
-              <img src="images/sponsor-a-cat.png" alt="Sponsor A Cat">
-            </a>
-            <a href="#" class="grid-item">
-              <img src="images/donation.png" alt="Donation">
-            </a>
-            <a href="#" class="grid-item">
-              <img src="images/faqs.png" alt="FAQs">
-            </a>
-            <a href="#" class="grid-item">
-              <img src="images/contact-us.png" alt="Contact Us">
-            </a>
-        </div>
+      <div class="search-bar">
+        <i class="material-icons">search</i>
+        <input type="search" placeholder="Search" class="search-input" />
+      </div>
+
+      <div class="grid-container">
+        <a href="#" class="grid-item">
+          <img src="images/about-us.png" alt="About Us" />
+        </a>
+        <a href="bookavisit.html" class="grid-item">
+          <img src="images/book-a-visit.png" alt="Book A Visit" />
+        </a>
+        <a href="#" class="grid-item">
+          <img
+            src="images/exclusive-private-session.png"
+            alt="Exclusive Private Session"
+          />
+        </a>
+        <a href="#" class="grid-item">
+          <img src="images/gift-voucher.png" alt="Gift Voucher" />
+        </a>
+        <a href="#" class="grid-item">
+          <img src="images/sponsor-a-cat.png" alt="Sponsor A Cat" />
+        </a>
+        <a href="#" class="grid-item">
+          <img src="images/donation.png" alt="Donation" />
+        </a>
+        <a href="#" class="grid-item">
+          <img src="images/faqs.png" alt="FAQs" />
+        </a>
+        <a href="#" class="grid-item">
+          <img src="images/contact-us.png" alt="Contact Us" />
+        </a>
+      </div>
     </main>
 
-
     <footer class="site-footer">
-        <section class="footer-container">
-          <div class="footer-links">
-            <a href="#">PRIVACY POLICY</a>
-            <a href="#">BOOKING AND REFUND POLICY</a>
-            <a href="#">TERMS AND CONDITIONS</a>
-          </div>
-      
-          <div class="footer-social">
-            <p>@catcafemelbourne</p>
-              <div class="social-icons">
-                <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
-                <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
-                <a href="#"><img src="images/pinterest.png" alt="Pinterest"></a>
-              </div>
-          </div>
-        </section>
-      </footer>
+      <section class="footer-container">
+        <div class="footer-links">
+          <a href="#">PRIVACY POLICY</a>
+          <a href="#">BOOKING AND REFUND POLICY</a>
+          <a href="#">TERMS AND CONDITIONS</a>
+        </div>
 
-<script src="catscript.js"></script>
-</body>
+        <div class="footer-social">
+          <p>@catcafemelbourne</p>
+          <div class="social-icons">
+            <a href="#"><img src="images/instagram.png" alt="Instagram" /></a>
+            <a href="#"><img src="images/facebook.png" alt="Facebook" /></a>
+            <a href="#"><img src="images/pinterest.png" alt="Pinterest" /></a>
+          </div>
+        </div>
+      </section>
+    </footer>
+
+    <script src="catscript.js"></script>
+  </body>
 </html>
