@@ -659,7 +659,8 @@ body.fade-in {
   /* Back button spacing */
   .back-home {
     margin-left: 5px;
-    margin-top: -10px;
+    margin-top: 10px;
+    margin-bottom: 30px;
     gap: 5px;
   }
 
