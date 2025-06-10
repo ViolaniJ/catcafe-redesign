@@ -438,7 +438,7 @@ body.fade-in {
   .cat-welcome {
     flex-direction: column;
     gap: 8px;
-    margin: 20px 0;
+    margin: -10px 0 20px 0;
     align-items: center;
     position: relative;
   }
@@ -455,7 +455,7 @@ body.fade-in {
   .visit-btn {
     position: absolute;
     bottom: 18px;
-    right: 30%; /* shift the button more to the left */
+    right: 29%; /* shift the button more to the left */
     transform: translateX(70%); /* pull it back right to center visually */
     font-size: 11px;
     padding: 6px 12px;
