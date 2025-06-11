@@ -1,3 +1,4 @@
+<!--BOOKAVISIT.HTML: The webpage of options to choose which category of the booking that the user desires-->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -5,21 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!--Source for fonts-->
     <link
       href="https://fonts.googleapis.com/css2?family=Jua&display=swap"
       rel="stylesheet"
     />
 
+    <!--Source for icons: shopping cart, trash, and others-->
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
 
+    <!--Imported CSS file-->
     <link rel="stylesheet" href="catstyle.css" />
     <script src="catstyle.css"></script>
     <title>Cat Cafe Book a Visit</title>
   </head>
   <body>
+    <!--Cat Cafe Logo-->
     <header class="site-header">
       <div class="logo-container">
         <a href="index.html" class="catcafelogo">
@@ -31,6 +37,7 @@
         </a>
       </div>
 
+      <!--Hamburger menu for the Mobile version-->
       <div class="hamburger" id="hamburger">
         <span></span>
         <span></span>
@@ -55,6 +62,7 @@
         </ul>
       </div>
 
+      <!--Horizontal Navigation Bar for Desktop version-->
       <nav class="navbar">
         <ul>
           <li><a href="index.html" class="home active">Home</a></li>
@@ -76,6 +84,7 @@
         </ul>
       </nav>
 
+      <!--Shopping Cart and Profile icon-->
       <div class="header-nav">
         <a href="shoppingcart.html" class="shoppingcart">
           <span class="material-icons">shopping_cart</span>
@@ -87,6 +96,7 @@
       </div>
     </header>
 
+    <!--Book A Visit Title-->
     <main class="bookavisit page">
       <section class="book-a-visit">
         <div class="back-home">
@@ -100,21 +110,29 @@
         </h1>
         <p>Select the options below</p>
 
+        <!--Visit Options-->
         <div class="visit-options">
+          <!--General Visit Session: the only option that work in this website's algorithm-->
           <div class="visit-option">
             <a href="selectdate.html" class="generalvisit">
               <img src="images/orange-yellow-cat.png" alt="General Visit" />
               <p>General Visit Session</p>
             </a>
           </div>
+
+          <!--Exclusive Private Session-->
           <div class="visit-option">
             <img src="images/white-cat.png" alt="Exlusive Session" />
             <p>Exclusive Private Session</p>
           </div>
+
+          <!--Digital Gift Voucher-->
           <div class="visit-option">
             <img src="images/grey-cat.png" alt="Digital Gift Voucher" />
             <p>Digital Gift Voucher</p>
           </div>
+
+          <!--Value Multi-Visit Pass-->
           <div class="visit-option">
             <img
               src="images/orange-white-cat.png"
@@ -126,6 +144,7 @@
       </section>
     </main>
 
+    <!--Footer section-->
     <footer class="site-footer">
       <section class="footer-container">
         <div class="footer-links">
@@ -145,6 +164,7 @@
       </section>
     </footer>
 
+    <!--Imported javascript file-->
     <script src="catscript.js"></script>
   </body>
 </html>
