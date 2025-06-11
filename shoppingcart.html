@@ -1,3 +1,4 @@
+<!--SHOPPINGCART.HTML: displays selected passes with quantity, price and remove option -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -5,11 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!--Source for fonts-->
     <link
       href="https://fonts.googleapis.com/css2?family=Jua&display=swap"
       rel="stylesheet"
     />
 
+    <!--Source for icons: shopping cart, trash, and others-->
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
@@ -19,12 +23,14 @@
       rel="stylesheet"
     />
 
+    <!--Imported CSS file-->
     <link rel="stylesheet" href="catstyle.css" />
-    <script src="catstyle.css"></script>
-    <title>Cat Cafe Book a Visit</title>
+    <title>Cat Cafe Shopping Cart</title>
   </head>
   <body>
+    <!--Header section-->
     <header class="site-header">
+      <!--Cat Cafe Logo-->
       <div class="logo-container">
         <a href="index.html" class="catcafelogo">
           <img
@@ -35,6 +41,7 @@
         </a>
       </div>
 
+      <!--Hamburger menu for the Mobile version-->
       <div class="hamburger" id="hamburger">
         <span></span>
         <span></span>
@@ -59,6 +66,7 @@
         </ul>
       </div>
 
+      <!--Horizontal Navigation Bar for Desktop version-->
       <nav class="navbar">
         <ul>
           <li><a href="index.html" class="home active">Home</a></li>
@@ -80,6 +88,7 @@
         </ul>
       </nav>
 
+      <!--Shopping Cart and Profile icon-->
       <div class="header-nav">
         <a href="shoppingcart.html" class="shoppingcart">
           <span class="material-icons">shopping_cart</span>
@@ -91,9 +100,10 @@
       </div>
     </header>
 
+    <!--Main section-->
     <main class="shopping-cart-page">
-      <!-- back link: update later -->
       <section class="shopping-cart-section">
+        <!--Navigation to go back to the previous page-->
         <div class="back-wrapper">
           <div class="back-pass">
             <a href="selectpass.html" class="back-link">←</a>
@@ -104,6 +114,7 @@
         <div class="cart-container">
           <a href="#" class="back-to-cart"></a>
 
+          <!--header of the shopping cart-->
           <div class="cart-table">
             <div class="cart-header">
               <span class="product">PRODUCT</span>
@@ -114,6 +125,7 @@
             <!--this part of html is developed in catscript.js-->
             <div class="cart-items"></div>
 
+            <!--cart subtotal section-->
             <div class="cart-subtotal">
               <span class="subtotal">SUBTOTAL</span>
               <span class="subtotal-quantity"></span>
@@ -121,25 +133,30 @@
             </div>
           </div>
 
+          <!--contact information for user to fill in-->
           <div class="checkout-form">
             <h2>CONTACT INFORMATION</h2>
             <form>
+              <!--First Name-->
               <label
                 >First Name <span class="required">*</span><br /><input
                   type="text"
                   required
               /></label>
+              <!--Last Name-->
               <label
                 >Last Name <span class="required">*</span><br /><input
                   type="text"
                   required
               /></label>
+              <!--Email-->
               <label
                 >Email <span class="required">*</span><br /><input
                   type="email"
                   placeholder="e.g. abcd1234@xxxx.com"
                   required
               /></label>
+              <!--Phone Number-->
               <label
                 >Phone Number <span class="required">*</span><br /><input
                   type="tel"
@@ -149,6 +166,7 @@
               <p class="signin-note">
                 Already have an account? <a href="#">Sign in</a>
               </p>
+              <!--Proceed to checkout-->
               <button
                 type="submit"
                 class="checkout-btn"
@@ -162,6 +180,7 @@
       </section>
     </main>
 
+    <!--Footer section-->
     <footer class="site-footer">
       <section class="footer-container">
         <div class="footer-links">
@@ -181,6 +200,7 @@
       </section>
     </footer>
 
+    <!--Imported javascript file-->
     <script src="catscript.js"></script>
   </body>
 </html>

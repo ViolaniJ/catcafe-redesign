@@ -1,34 +1,52 @@
+<!--SELECTPASS.HTML: selecting items to be purchased as a part of the booking process-->
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
+    <!--Source for fonts-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jua&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
 
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Source for icons: shopping cart, trash, and others-->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
 
-    <link rel="stylesheet" href="catstyle.css">
-    <script src="catstyle.css"></script>
+    <!--Imported CSS file-->
+    <link rel="stylesheet" href="catstyle.css" />
     <title>Cat Cafe Book a Visit</title>
-</head>
-<body>
+  </head>
+  <body>
+    <!--Header section-->
     <header class="site-header">
+      <!--Cat Cafe Logo-->
+      <div class="logo-container">
+        <a href="index.html" class="catcafelogo">
+          <img
+            src="images/catcafelogo.png"
+            alt="Cat Cafe Logo"
+            class="catcafelogo"
+          />
+        </a>
+      </div>
 
-        <div class="logo-container">
-          <a href="index.html" class="catcafelogo">
-            <img src="images/catcafelogo.png" alt="Cat Cafe Logo" class="catcafelogo">
-          </a>
-        </div>
-
-        <div class="hamburger" id="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
+      <!--Hamburger menu for the Mobile version-->
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
 
       <div class="hamburger-menu" id="hamburgerMenu">
         <ul>
@@ -47,212 +65,246 @@
           </li>
         </ul>
       </div>
-            
-        <nav class="navbar">
-          <ul>
-            <li><a href="index.html" class="home active">Home</a></li>
-            <li><a href="#" class="aboutUs active">About Us</a></li>
-            <li><a href="bookavisit.html" class="bookAVisit active">Book A Visit</a></li>
-            <li><a href="#" class="supportUs active">Support Us</a></li>
-            <li><a href="#" class="contactUs active">Contact Us</a></li>
-            <li>
-              <a href="searchpage.html" class="search">
-                <img src="images/searchicon.png" alt="search icon" class="searchicon">
-              </a>
-            </li>
-          </ul>
-        </nav>
-    
-        <div class="header-nav">
-          <a href="shoppingcart.html" class="shoppingcart">
-            <span class="material-icons">shopping_cart</span>
-            <span class="cart-badge hidden">0</span>
-          </a>
-          <a href="#" class="profile">
-            <img src="images/profile.png" alt="Profile" class="profile">
-          </a>
-        </div>
+
+      <!--Horizontal Navigation Bar for Desktop version-->
+      <nav class="navbar">
+        <ul>
+          <li><a href="index.html" class="home active">Home</a></li>
+          <li><a href="#" class="aboutUs active">About Us</a></li>
+          <li>
+            <a href="bookavisit.html" class="bookAVisit active">Book A Visit</a>
+          </li>
+          <li><a href="#" class="supportUs active">Support Us</a></li>
+          <li><a href="#" class="contactUs active">Contact Us</a></li>
+          <li>
+            <a href="searchpage.html" class="search">
+              <img
+                src="images/searchicon.png"
+                alt="search icon"
+                class="searchicon"
+              />
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <!--Shopping Cart and Profile icon-->
+      <div class="header-nav">
+        <a href="shoppingcart.html" class="shoppingcart">
+          <span class="material-icons">shopping_cart</span>
+          <span class="cart-badge hidden">0</span>
+        </a>
+        <a href="#" class="profile">
+          <img src="images/profile.png" alt="Profile" class="profile" />
+        </a>
+      </div>
     </header>
 
+    <!--Main section-->
     <main class="select-pass">
-        <section class="select-pass-section">
-            <div class="back-home selectpass-back-home">
-                <a href="selectdate.html" class="back-link">←</a>
-                <a href="bookavisit.html" class="back-choose">Book A Visit</a>
-                <span class="divider"> |</span>
-                <a href="selectdate.html" class="back-visit">General Visit Session</a>
-            </div>
+      <section class="select-pass-section">
+        <!--Navigation to go back to the previous page-->
+        <div class="back-home selectpass-back-home">
+          <a href="selectdate.html" class="back-link">←</a>
+          <a href="bookavisit.html" class="back-choose">Book A Visit</a>
+          <span class="divider"> |</span>
+          <a href="selectdate.html" class="back-visit">General Visit Session</a>
+        </div>
 
-            <div class="booking-layout">
-                <aside class="booking-menu">
-                    <ul>
-                        <li><strong>STANDARD PASSES</strong> <span class="paw-icon"><i class="fas fa-paw"></i></span></li>
-                        <li>COMBO TREAT PACKS</li>
-                        <li>SOUVENIR PACKS</li>
-                        <li>ADD-ONS</li>
-                    </ul>
-                </aside>
+        <div class="booking-layout">
+          <!--Booking category option (non-interactable)-->
+          <aside class="booking-menu">
+            <ul>
+              <li>
+                <strong>STANDARD PASSES</strong>
+                <span class="paw-icon"><i class="fas fa-paw"></i></span>
+              </li>
+              <li>COMBO TREAT PACKS</li>
+              <li>SOUVENIR PACKS</li>
+              <li>ADD-ONS</li>
+            </ul>
+          </aside>
 
-                <div class="booking-options-scroll">
-                    <section class="booking-options">
-                        <div class="pass-card" data-id="pass-001" data-enabled="true" data-image="images/green-cat.png">
-                            <div class="card-top">
-                                <img src="images/green-cat.png" alt="cat face">
-                                <div class="card-text">
-                                    <h2>1 HOUR PASS</h2>
-                                    <p>Entry Only</p>
-                                    <span class="price">$19</span>
-                                </div>
-                            </div>
-                            
-                            <!--enabled-->
-                            <div class="card-bottom">
-                                <div class="quantity-selector">
-                                    <button class="qty-btn minus">-</button>
-                                    <span class="qty-value">0</span>
-                                    <button class="qty-btn plus">+</button>
-                                </div>
-                                <button class="add-to-cart">Add to Cart</button>
-                            </div>
-                        </div>
-                        
-                        <!--disabled-->
-                        <div class="pass-card" data-id="pass-002" data-enabled="false">
-                            <div class="card-top">
-                                <img src="images/brown-cat.png" alt="cat face">
-                                <div class="card-text">
-                                    <h2>1 HOUR PASS</h2>
-                                    <p>+ Complimentary<br>Drink</p>
-                                    <span class="price orange">$22</span>
-                                </div>
-                            </div>
-                          
-                            <div class="card-bottom">
-                                <div class="quantity-selector">
-                                    <button class="qty-btn" disabled>-</button>
-                                    <span class="qty-value">0</span>
-                                    <button class="qty-btn" disabled>+</button>
-                                </div>
-                                <button class="add-to-cart" disabled>Add to Cart</button>
-                            </div>
-                        </div>
-
-                        <div class="pass-card" data-id="pass-003" data-enabled="true" data-image="images/brown-cat.png">
-                            <div class="card-top">
-                                <img src="images/brown-cat.png" alt="cat face">
-                                <div class="card-text">
-                                    <h2>1 HOUR PASS</h2>
-                                    <p>+ Hot Coffee OR Chocolate OR Tea</p>
-                                    <span class="price orange">$24.5</span>
-                                </div>
-                            </div>
-                            
-                            <div class="card-bottom">
-                                <div class="quantity-selector">
-                                    <button class="qty-btn minus">-</button>
-                                    <span class="qty-value">0</span>
-                                    <button class="qty-btn plus">+</button>
-                                </div>
-                                <button class="add-to-cart">Add to Cart</button>
-                            </div>
-                        </div>
-
-                        <div class="pass-card" data-id="pass-004" data-enabled="false">
-                            <div class="card-top">
-                                <img src="images/brown-cat.png" alt="cat face">
-                                <div class="card-text">
-                                    <h2>1 HOUR PASS</h2>
-                                    <p>+ Iced Coffee OR Chocolate OR Fruity Tea</p>
-                                    <span class="price orange">$25.5</span>
-                                </div>
-                            </div>
-                        
-                            <div class="card-bottom">
-                                <div class="quantity-selector">
-                                    <button class="qty-btn" disabled>-</button>
-                                    <span class="qty-value">0</span>
-                                    <button class="qty-btn" disabled>+</button>
-                                </div>
-                                <button class="add-to-cart" disabled>Add to Cart</button>
-                            </div>
-                        </div>
-
-                        <div class="pass-card" data-id="pass-005" data-enabled="false">
-                            <div class="card-top">
-                                <img src="images/purple-cat.png" alt="cat face">
-                                <div class="card-text">
-                                    <h2>2 HOURS PASS</h2>
-                                    <p>+ Drink<br> + Cat Biscuits and Cat Paste Treats</p>
-                                    <span class="price purple">$47</span>
-                                </div>
-                            </div> 
-                          
-                            <div class="card-bottom">
-                                <div class="quantity-selector">
-                                    <button class="qty-btn" disabled>-</button>
-                                    <span class="qty-value">0</span>
-                                    <button class="qty-btn" disabled>+</button>
-                                </div>
-                                <button class="add-to-cart" disabled>Add to Cart</button>
-                            </div>
-                        </div>
-
-                        <div class="pass-card" data-id="pass-006" data-enabled="false">
-                            <div class="card-top">
-                                <img src="images/black-cat.png" alt="cat face">
-                                <div class="card-text">
-                                    <h2>3 HOURS PASS</h2>
-                                    <p>+ Drink<br>+ Cat Treats<br>● 2x Paste Treats<br>● 2x Fish Bites<br>● 2x Cat Biscuits</p>
-                                    <span class="price gray">$70</span>
-                                </div>
-                            </div>
-                           
-                            <div class="card-bottom">
-                                <div class="quantity-selector">
-                                    <button class="qty-btn" disabled>-</button>
-                                    <span class="qty-value">0</span>
-                                    <button class="qty-btn" disabled>+</button>
-                                </div>
-                                <button class="add-to-cart" disabled>Add to Cart</button>
-                            </div>
-                        </div>
-                    </section>
+          <div class="booking-options-scroll">
+            <section class="booking-options">
+              <!--Item 1 (enabled)-->
+              <div
+                class="pass-card"
+                data-id="pass-001"
+                data-enabled="true"
+                data-image="images/green-cat.png"
+              >
+                <div class="card-top">
+                  <img src="images/green-cat.png" alt="cat face" />
+                  <div class="card-text">
+                    <h2>1 HOUR PASS</h2>
+                    <p>Entry Only</p>
+                    <span class="price">$19</span>
+                  </div>
                 </div>
-                <aside class="aside-right">
-                    <div class="price-note">
-                        <p>$ ALL PRICES ARE<br> PER PERSON</p>
-                    </div>
-                </aside>
-            </div>
+                <div class="card-bottom">
+                  <div class="quantity-selector">
+                    <button class="qty-btn minus">-</button>
+                    <span class="qty-value">0</span>
+                    <button class="qty-btn plus">+</button>
+                  </div>
+                  <button class="add-to-cart">Add to Cart</button>
+                </div>
+              </div>
 
-            <div class="change-page">
-                <a href="selectdate.html" class="prev">&lt; PREVIOUS</a>
-                <a href="shoppingcart.html" class="next-button2">NEXT &gt;</a>
+              <!--Item 2 (disabled)-->
+              <div class="pass-card" data-id="pass-002" data-enabled="false">
+                <div class="card-top">
+                  <img src="images/brown-cat.png" alt="cat face" />
+                  <div class="card-text">
+                    <h2>1 HOUR PASS</h2>
+                    <p>+ Complimentary<br />Drink</p>
+                    <span class="price orange">$22</span>
+                  </div>
+                </div>
+                <div class="card-bottom">
+                  <div class="quantity-selector">
+                    <button class="qty-btn" disabled>-</button>
+                    <span class="qty-value">0</span>
+                    <button class="qty-btn" disabled>+</button>
+                  </div>
+                  <button class="add-to-cart" disabled>Add to Cart</button>
+                </div>
+              </div>
+
+              <!--Item 3 (enabled)-->
+              <div
+                class="pass-card"
+                data-id="pass-003"
+                data-enabled="true"
+                data-image="images/brown-cat.png"
+              >
+                <div class="card-top">
+                  <img src="images/brown-cat.png" alt="cat face" />
+                  <div class="card-text">
+                    <h2>1 HOUR PASS</h2>
+                    <p>+ Hot Coffee OR Chocolate OR Tea</p>
+                    <span class="price orange">$24.5</span>
+                  </div>
+                </div>
+                <div class="card-bottom">
+                  <div class="quantity-selector">
+                    <button class="qty-btn minus">-</button>
+                    <span class="qty-value">0</span>
+                    <button class="qty-btn plus">+</button>
+                  </div>
+                  <button class="add-to-cart">Add to Cart</button>
+                </div>
+              </div>
+
+              <!--Item 4 (disabled)-->
+              <div class="pass-card" data-id="pass-004" data-enabled="false">
+                <div class="card-top">
+                  <img src="images/brown-cat.png" alt="cat face" />
+                  <div class="card-text">
+                    <h2>1 HOUR PASS</h2>
+                    <p>+ Iced Coffee OR Chocolate OR Fruity Tea</p>
+                    <span class="price orange">$25.5</span>
+                  </div>
+                </div>
+                <div class="card-bottom">
+                  <div class="quantity-selector">
+                    <button class="qty-btn" disabled>-</button>
+                    <span class="qty-value">0</span>
+                    <button class="qty-btn" disabled>+</button>
+                  </div>
+                  <button class="add-to-cart" disabled>Add to Cart</button>
+                </div>
+              </div>
+
+              <!--Item 5 (disabled)-->
+              <div class="pass-card" data-id="pass-005" data-enabled="false">
+                <div class="card-top">
+                  <img src="images/purple-cat.png" alt="cat face" />
+                  <div class="card-text">
+                    <h2>2 HOURS PASS</h2>
+                    <p>
+                      + Drink<br />
+                      + Cat Biscuits and Cat Paste Treats
+                    </p>
+                    <span class="price purple">$47</span>
+                  </div>
+                </div>
+                <div class="card-bottom">
+                  <div class="quantity-selector">
+                    <button class="qty-btn" disabled>-</button>
+                    <span class="qty-value">0</span>
+                    <button class="qty-btn" disabled>+</button>
+                  </div>
+                  <button class="add-to-cart" disabled>Add to Cart</button>
+                </div>
+              </div>
+
+              <!--Item 6 (disabled)-->
+              <div class="pass-card" data-id="pass-006" data-enabled="false">
+                <div class="card-top">
+                  <img src="images/black-cat.png" alt="cat face" />
+                  <div class="card-text">
+                    <h2>3 HOURS PASS</h2>
+                    <p>
+                      + Drink<br />+ Cat Treats<br />● 2x Paste Treats<br />● 2x
+                      Fish Bites<br />● 2x Cat Biscuits
+                    </p>
+                    <span class="price gray">$70</span>
+                  </div>
+                </div>
+                <div class="card-bottom">
+                  <div class="quantity-selector">
+                    <button class="qty-btn" disabled>-</button>
+                    <span class="qty-value">0</span>
+                    <button class="qty-btn" disabled>+</button>
+                  </div>
+                  <button class="add-to-cart" disabled>Add to Cart</button>
+                </div>
+              </div>
+            </section>
+          </div>
+
+          <!--Information regarding each items-->
+          <aside class="aside-right">
+            <div class="price-note">
+              <p>
+                $ ALL PRICES ARE<br />
+                PER PERSON
+              </p>
             </div>
-        </section>
+          </aside>
+        </div>
+
+        <!--Previous & Next buttons-->
+        <div class="change-page">
+          <a href="selectdate.html" class="prev">&lt; PREVIOUS</a>
+          <a href="shoppingcart.html" class="next-button2">NEXT &gt;</a>
+        </div>
+      </section>
     </main>
 
-    </main>
-
+    <!--Footer section-->
     <footer class="site-footer">
-        <section class="footer-container">
-            <div class="footer-links">
-                <a href="#">PRIVACY POLICY</a>
-                <a href="#">BOOKING AND REFUND POLICY</a>
-                <a href="#">TERMS AND CONDITIONS</a>
-            </div>
-    
-            <div class="footer-social">
-                <p>@catcafemelbourne</p>
-                <div class="social-icons">
-                    <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
-                    <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
-                    <a href="#"><img src="images/pinterest.png" alt="Pinterest"></a>
-                </div>
-            </div>
-        </section>
+      <section class="footer-container">
+        <div class="footer-links">
+          <a href="#">PRIVACY POLICY</a>
+          <a href="#">BOOKING AND REFUND POLICY</a>
+          <a href="#">TERMS AND CONDITIONS</a>
+        </div>
+
+        <div class="footer-social">
+          <p>@catcafemelbourne</p>
+          <div class="social-icons">
+            <a href="#"><img src="images/instagram.png" alt="Instagram" /></a>
+            <a href="#"><img src="images/facebook.png" alt="Facebook" /></a>
+            <a href="#"><img src="images/pinterest.png" alt="Pinterest" /></a>
+          </div>
+        </div>
+      </section>
     </footer>
 
-<script src="catscript.js"></script>
-</body>
+    <!--Imported javascript file-->
+    <script src="catscript.js"></script>
+  </body>
 </html>

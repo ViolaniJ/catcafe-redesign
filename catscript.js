@@ -1,9 +1,12 @@
-// ====== Page Transition Effect ======
+// CATSCRIPT.JS: Interactivity across the website
+
+// Page transition effect
 document.addEventListener("DOMContentLoaded", () => {
-  document.body.classList.add("fade-in");
-  updateCartBadge(); // update cart bubble on page load
+  document.body.classList.add("fade-in"); // fade in transition
+  updateCartBadge(); // update cart bubble on every page when user add items to the shopping cart
 });
 
+// Fade out transition on internal links
 document.querySelectorAll("a[href]").forEach((link) => {
   const url = new URL(link.href);
   const isSameOrigin = url.origin === location.origin;
@@ -21,28 +24,29 @@ document.querySelectorAll("a[href]").forEach((link) => {
   }
 });
 
-// ====== Time Slot Selection ======
-const slot1pm = document.getElementById("slot-1pm");
+// Time slot selection in the SELECTDATE.HTML
+const slot1pm = document.getElementById("slot-1pm"); // only 1pm is allowed in this algorithm
 if (slot1pm) {
   slot1pm.addEventListener("click", () => {
     slot1pm.classList.toggle("selected");
   });
 }
 
-// ====== Calendar Date Selection ======
+// Select date in SELECTDATE.HTML
 const days = document.querySelectorAll(".calendar-day.selectable");
 days.forEach((day) => {
   day.addEventListener("click", () => {
     if (day.classList.contains("selected-date")) {
+      // only the the date 18 is allowed in this algorithm
       day.classList.remove("selected-date");
     } else {
-      days.forEach((d) => d.classList.remove("selected-date"));
-      day.classList.add("selected-date");
+      days.forEach((d) => d.classList.remove("selected-date")); // clear if previous selected date
+      day.classList.add("selected-date"); // add new selection
     }
   });
 });
 
-// ====== Quantity Selector ======
+// Adding and subtracting product quantity in SELECTPASS.HTML
 document.querySelectorAll(".quantity-selector").forEach((selector) => {
   const minusBtn = selector.querySelector(".minus");
   const plusBtn = selector.querySelector(".plus");
@@ -55,7 +59,7 @@ document.querySelectorAll(".quantity-selector").forEach((selector) => {
   plusBtn.addEventListener("click", () => {
     let count = parseInt(qtyValue.textContent);
     if (count < 1) {
-      qtyValue.textContent = count + 1;
+      qtyValue.textContent = count + 1; // only allows 0 or 1
     }
   });
 
@@ -67,7 +71,7 @@ document.querySelectorAll(".quantity-selector").forEach((selector) => {
   });
 });
 
-// ====== Pass Card Logic (selectpass.html) ======
+// Updating products from SELECTPASS.HTML to SHOPPINGCART.HTML
 document.querySelectorAll(".pass-card").forEach((card) => {
   const minusBtn = card.querySelector(".minus");
   const plusBtn = card.querySelector(".plus");
@@ -75,6 +79,7 @@ document.querySelectorAll(".pass-card").forEach((card) => {
   const addToCartBtn = card.querySelector(".add-to-cart");
 
   if (minusBtn && plusBtn && qtyValue) {
+    // quantity control per product
     minusBtn.addEventListener("click", () => {
       let qty = parseInt(qtyValue.textContent);
       if (qty > 0) qtyValue.textContent = qty - 1;
@@ -86,6 +91,7 @@ document.querySelectorAll(".pass-card").forEach((card) => {
     });
   }
 
+  // updating product details in shopping cart when clicking add to cart button
   if (addToCartBtn && qtyValue) {
     addToCartBtn.addEventListener("click", () => {
       const quantity = Math.min(parseInt(qtyValue.textContent), 1);
@@ -97,35 +103,36 @@ document.querySelectorAll(".pass-card").forEach((card) => {
           card.querySelector(".price")?.innerText.replace("$", "") || "0";
         const price = parseFloat(priceText);
 
+        // pre-set details for product information
         let image = "";
         let date = "Friday, 18th April, 2025 @ 1:00 PM (GMT+10)";
         if (id === "pass-001") image = "images/green-cat.png";
         else if (id === "pass-003") image = "images/brown-cat.png";
 
-        // Reset confirmation status on new item
+        // reset confirmation status on new item
         localStorage.setItem("checkoutConfirmed", "false");
 
         let cart = JSON.parse(localStorage.getItem("cart")) || [];
         const existingItem = cart.find((item) => item.id === id);
         if (existingItem) {
-          existingItem.quantity = 1;
+          existingItem.quantity = 1; // always set to 1
           existingItem.image = image;
           existingItem.date = date;
         } else {
-          // Always set quantity to 1 regardless of selected amount
+          // always set quantity to 1 regardless of selected amount
           cart.push({ id, title, details, price, quantity: 1, image, date });
         }
 
         localStorage.setItem("cart", JSON.stringify(cart));
-        qtyValue.textContent = 0;
+        qtyValue.textContent = 0; // reset quantity
 
-        updateCartBadge();
+        updateCartBadge(); // refresh bubble
       }
     });
   }
 });
 
-// ====== Update Cart Bubble ======
+// Updating shopping cart bubble if item is added across all pages
 function updateCartBadge() {
   const cartBadge = document.querySelector(".cart-badge");
   const cart = JSON.parse(localStorage.getItem("cart")) || [];
@@ -143,21 +150,25 @@ function updateCartBadge() {
   }
 }
 
-// ====== Display Cart Items (shoppingcart.html) ======
+// Display Cart Items in SHOPPINGCART.HTML
 function renderCartItems() {
   const cartItemsContainer = document.querySelector(".cart-items");
   const subtotalAmount = document.querySelector(".subtotal-amount");
 
+  // no render if page doesn't have products and subtotal elements
   if (!cartItemsContainer || !subtotalAmount) return;
 
   const cart = JSON.parse(localStorage.getItem("cart")) || [];
-  cartItemsContainer.innerHTML = "";
+  cartItemsContainer.innerHTML = ""; // clear current items
+
   let subtotal = 0;
 
+  // subtotal amount
   cart.forEach((item) => {
     const itemTotal = item.quantity * item.price;
     subtotal += itemTotal;
 
+    // generate items in shopping cart
     const itemHTML = `
       <div class="cart-item-row" data-id="${item.id}">
         <div class="item-info">
@@ -189,11 +200,11 @@ function renderCartItems() {
   });
 
   subtotalAmount.textContent = `$${subtotal.toFixed(2)}`;
-  attachRemoveListeners();
+  attachRemoveListeners(); // allow removing product from cart
 }
 renderCartItems();
 
-// ====== Remove Items ======
+// Removing products from cart using the trash icon
 function attachRemoveListeners() {
   document.querySelectorAll(".remove-btn").forEach((btn) => {
     btn.addEventListener("click", (e) => {
@@ -211,33 +222,34 @@ function attachRemoveListeners() {
   });
 }
 
-// ====== Pay & Confirm (carddetails.html) ======
+// Final confirmation for checkout
 const checkoutBtn = document.querySelector(".confirm-button");
 if (checkoutBtn) {
   checkoutBtn.addEventListener("click", () => {
     localStorage.removeItem("cart");
-    localStorage.setItem("checkoutConfirmed", "true"); // ✅ Mark as paid
-    updateCartBadge();
+    localStorage.setItem("checkoutConfirmed", "true");
+    updateCartBadge(); // hide bubble once pay and confirmed
   });
 }
 
+// Hamburger menu toggle for mobile version
 const hamburger = document.getElementById("hamburger");
 const menu = document.getElementById("hamburgerMenu");
 
-// Toggle menu open/close
+// show/hide menu on icon click
 hamburger.addEventListener("click", (e) => {
-  e.stopPropagation(); // Prevent immediate close from document click
+  e.stopPropagation(); // prevent immediate close from document click
   menu.classList.toggle("show");
 });
 
-// Close menu if you click outside of it
+// close Hamburger menu if clicking any other elements
 document.addEventListener("click", (e) => {
   if (!menu.contains(e.target) && !hamburger.contains(e.target)) {
     menu.classList.remove("show");
   }
 });
 
-// Optional: Close menu when a nav item is clicked
+// close hamburger menu when clicking one of the navigation menus
 const links = menu.querySelectorAll("a");
 links.forEach((link) => {
   link.addEventListener("click", () => {

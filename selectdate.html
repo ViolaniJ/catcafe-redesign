@@ -1,3 +1,4 @@
+<!--SELECTDATE.HTML: selecting date and timeslot options for booking-->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -5,21 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!--Source for fonts-->
     <link
       href="https://fonts.googleapis.com/css2?family=Jua&display=swap"
       rel="stylesheet"
     />
 
+    <!--Source for icons: shopping cart, trash, and others-->
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
 
+    <!--Imported CSS file-->
     <link rel="stylesheet" href="catstyle.css" />
-    <title>Cat Cafe Book a Visit</title>
+    <title>Cat Cafe Select a Date</title>
   </head>
   <body>
+    <!--Header section-->
     <header class="site-header">
+      <!--Cat Cafe Logo-->
       <div class="logo-container">
         <a href="index.html" class="catcafelogo">
           <img
@@ -30,6 +37,7 @@
         </a>
       </div>
 
+      <!--Hamburger menu for the Mobile version-->
       <div class="hamburger" id="hamburger">
         <span></span>
         <span></span>
@@ -54,6 +62,7 @@
         </ul>
       </div>
 
+      <!--Horizontal Navigation Bar for Desktop version-->
       <nav class="navbar">
         <ul>
           <li><a href="index.html" class="home active">Home</a></li>
@@ -75,6 +84,7 @@
         </ul>
       </nav>
 
+      <!--Shopping Cart and Profile icon-->
       <div class="header-nav">
         <a href="shoppingcart.html" class="shoppingcart">
           <span class="material-icons">shopping_cart</span>
@@ -86,8 +96,10 @@
       </div>
     </header>
 
+    <!--Main section-->
     <main class="selectdate page">
       <section class="select-a-date">
+        <!--Navigation to go back to the previous page-->
         <div class="back-home">
           <a href="bookavisit.html" class="back-link">←</a>
           <a href="bookavisit.html" class="back-choose">Book A Visit</a>
@@ -95,6 +107,7 @@
           <a href="selectdate.html" class="back-visit">General Visit Session</a>
         </div>
 
+        <!--General Visit Session Title-->
         <h1>
           <img src="images/brownpaw.png" alt="cat paw" class="paw" />
           GENERAL VISIT SESSION
@@ -103,13 +116,17 @@
         <p>Select a date to see available times</p>
 
         <div class="booking-layout">
+          <!--Calendar-->
           <div class="calendar-container">
             <div class="calendar-box">
+              <!--Month-->
               <div class="calendar-header">
                 <span class="arrow">◀</span>
                 <span class="month-title">APRIL 2025</span>
                 <span class="arrow">▶</span>
               </div>
+
+              <!--Days-->
               <div class="calendar-weekdays">
                 <div>M</div>
                 <div>T</div>
@@ -119,6 +136,8 @@
                 <div>S</div>
                 <div>S</div>
               </div>
+
+              <!--Date-->
               <div class="calendar-grid">
                 <div class="calendar-day disabled">31</div>
                 <div class="dimmed">1</div>
@@ -157,18 +176,21 @@
                 <div class="calendar-day disabled">4</div>
               </div>
 
+              <!--Line to strip date that isn't available-->
               <div class="calendar-line line-1"></div>
               <div class="calendar-line line-2"></div>
               <div class="calendar-line line-3"></div>
             </div>
           </div>
 
+          <!--Timeslots-->
           <div class="timeslots">
             <div class="slot-wrap">
               <button class="slot sold-out">12:00 PM</button>
               <p class="slot-status">Sold out</p>
             </div>
 
+            <!--The only available timeslot for this website's algorithm-->
             <div class="slot-wrap">
               <button class="slot available" id="slot-1pm">1:00 PM</button>
               <p class="slot-status">(8 left)</p>
@@ -195,6 +217,7 @@
       </section>
     </main>
 
+    <!--Footer section-->
     <footer class="site-footer">
       <section class="footer-container">
         <div class="footer-links">
@@ -214,6 +237,7 @@
       </section>
     </footer>
 
+    <!--Imported javascript file-->
     <script src="catscript.js"></script>
   </body>
 </html>

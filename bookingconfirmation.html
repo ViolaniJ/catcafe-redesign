@@ -1,3 +1,4 @@
+<!--BOOKINGCONFIRMATION.HTML: Final step of booking process to show that booking has been made-->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -5,22 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!--Source for fonts-->
     <link
       href="https://fonts.googleapis.com/css2?family=Jua&display=swap"
       rel="stylesheet"
     />
 
+    <!--Source for icons: shopping cart, trash, and others-->
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
 
+    <!--Imported CSS file-->
     <link rel="stylesheet" href="catstyle.css" />
-    <script src="catstyle.css"></script>
-    <title>Cat Cafe Book a Visit</title>
+    <title>Cat Cafe Booking Confirmed</title>
   </head>
   <body>
+    <!--Header section-->
     <header class="site-header">
+      <!--Cat Cafe Logo-->
       <div class="logo-container">
         <a href="index.html" class="catcafelogo">
           <img
@@ -31,6 +37,7 @@
         </a>
       </div>
 
+      <!--Hamburger menu for the Mobile version-->
       <div class="hamburger" id="hamburger">
         <span></span>
         <span></span>
@@ -55,6 +62,7 @@
         </ul>
       </div>
 
+      <!--Horizontal Navigation Bar for Desktop version-->
       <nav class="navbar">
         <ul>
           <li><a href="index.html" class="home active">Home</a></li>
@@ -76,6 +84,7 @@
         </ul>
       </nav>
 
+      <!--Shopping Cart and Profile icon-->
       <div class="header-nav">
         <a href="shoppingcart.html" class="shoppingcart">
           <span class="material-icons">shopping_cart</span>
@@ -86,8 +95,10 @@
       </div>
     </header>
 
+    <!--Main section-->
     <main>
       <section class="confirmed-page">
+        <!--Cat badge confirmation picture-->
         <div class="confirmation-wrapper">
           <img
             src="images/cat-badge.png"
@@ -95,6 +106,7 @@
             class="confirmation-image"
           />
 
+          <!--Email note-->
           <div class="email-note">
             <img src="images/brownpaw.png" alt="cat paw" class="paws1" />
             <p>
@@ -104,16 +116,19 @@
             <img src="images/brownpaw.png" alt="cat paw" class="paws2" />
           </div>
 
+          <!--Thank you message-->
           <p class="thank-you-message">
             Thank you! Get ready for a cozy, cuddly and pawsome time at the the
             cafe!
           </p>
 
+          <!--Back to Homepage navigation-->
           <a href="index.html" class="back-home-link">Back to Homepage</a>
         </div>
       </section>
     </main>
 
+    <!--Footer section-->
     <footer class="site-footer">
       <section class="footer-container">
         <div class="footer-links">
@@ -133,6 +148,7 @@
       </section>
     </footer>
 
+    <!--Imported javascript file-->
     <script src="catscript.js"></script>
   </body>
 </html>

@@ -1,3 +1,4 @@
+<!--CARDDETAILS.HTML: Webpage for user to fill in payment information-->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -5,22 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!--Source for fonts-->
     <link
       href="https://fonts.googleapis.com/css2?family=Jua&display=swap"
       rel="stylesheet"
     />
 
+    <!--Source for icons: shopping cart, trash, and others-->
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
 
+    <!--Imported CSS file-->
     <link rel="stylesheet" href="catstyle.css" />
-    <script src="catstyle.css"></script>
-    <title>Cat Cafe Book a Visit</title>
+    <title>Cat Cafe Card Details</title>
   </head>
   <body>
+    <!--Header section-->
     <header class="site-header">
+      <!--Cat Cafe Logo-->
       <div class="logo-container">
         <a href="index.html" class="catcafelogo">
           <img
@@ -31,6 +37,7 @@
         </a>
       </div>
 
+      <!--Hamburger menu for the Mobile version-->
       <div class="hamburger" id="hamburger">
         <span></span>
         <span></span>
@@ -55,6 +62,7 @@
         </ul>
       </div>
 
+      <!--Horizontal Navigation Bar for Desktop version-->
       <nav class="navbar">
         <ul>
           <li><a href="index.html" class="home active">Home</a></li>
@@ -76,6 +84,7 @@
         </ul>
       </nav>
 
+      <!--Shopping Cart and Profile icon-->
       <div class="header-nav">
         <a href="shoppingcart.html" class="shoppingcart">
           <span class="material-icons">shopping_cart</span>
@@ -87,8 +96,10 @@
       </div>
     </header>
 
+    <!--Main section-->
     <main>
       <section class="card-details-section">
+        <!--Navigation to go back to the previous page-->
         <div class="back-shop">
           <a href="shoppingcart.html" class="back-link">←</a>
           <a href="shoppingcart.html" class="back-choose">Shopping Cart</a>
@@ -96,31 +107,39 @@
           <a href="carddetails.html" class="back-visit">Checkout</a>
         </div>
 
+        <!--Payment Information for user to fill in-->
         <div class="checkout-container">
           <section class="payment-info">
             <h2>PAYMENT INFORMATION</h2>
 
+            <!--First Name-->
             <label for="first-name"
               >FIRST NAME <span class="required">*</span></label
             >
             <input type="text" id="first-name" placeholder="Lilie" />
 
+            <!--Last Name-->
             <label for="last-name"
               >LAST NAME <span class="required">*</span></label
             >
             <input type="text" id="last-name" placeholder="Smith" />
 
+            <!--Coupon-->
             <div class="coupon">
               <img src="images/coupon.png" alt="Coupon Icon" />
               <input type="text" placeholder="ENTER COUPON CODE" />
             </div>
 
+            <!--Order Notes-->
             <label for="order-notes">ORDER NOTES (OPTIONAL)</label>
             <textarea id="order-notes" rows="4"></textarea>
           </section>
 
+          <!--Order Summary: Hard coded assuming that for the booking flow, user is only allowed to purchase 2 Items-->
           <section class="order-summary">
             <h2>ORDER SUMMARY</h2>
+
+            <!--Item 1-->
             <div class="order-item">
               <p>
                 <strong>1x GENERAL VISIT SESSION</strong><span>AUD$19.0</span>
@@ -128,6 +147,8 @@
               <p>1 HOUR PASS<br />Entry Only</p>
               <p>Friday, 18th April, 2025<br />@ 1:00 PM (GMT+10)</p>
             </div>
+
+            <!--Item 2-->
             <div class="order-item">
               <p>
                 <strong>1x GENERAL VISIT SESSION</strong><span>AUD$24.50</span>
@@ -141,8 +162,11 @@
             <p class="total-line total">TOTAL DUE <span>AUD$43.50</span></p>
           </section>
 
+          <!--Card details-->
           <section class="card-info">
             <h2>CREDIT OR DEBIT CARD</h2>
+
+            <!--Card number-->
             <label for="card-number"
               >CARD NUMBER <span class="required">*</span></label
             >
@@ -153,12 +177,15 @@
             />
 
             <div class="card-details">
+              <!--Expiry date-->
               <div>
                 <label for="expiry"
                   >EXPIRATION DATE <span class="required">*</span></label
                 >
                 <input type="text" id="expiry" placeholder="MM/YY" />
               </div>
+
+              <!--CVC-->
               <div>
                 <label for="cvc"
                   >SECURITY CODE <span class="required">*</span></label
@@ -167,6 +194,7 @@
               </div>
             </div>
 
+            <!--Checkbox-->
             <div class="checkbox">
               <input type="checkbox" id="agree" />
               <label for="agree"
@@ -175,6 +203,7 @@
               >
             </div>
 
+            <!--PAY & CONFIRM button-->
             <button
               class="confirm-button"
               onclick="window.location.href='bookingconfirmation.html'"
@@ -186,6 +215,7 @@
       </section>
     </main>
 
+    <!--Footer section-->
     <footer class="site-footer">
       <section class="footer-container">
         <div class="footer-links">
@@ -205,6 +235,7 @@
       </section>
     </footer>
 
+    <!--Imported javascript file-->
     <script src="catscript.js"></script>
   </body>
 </html>
