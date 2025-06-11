@@ -1119,6 +1119,13 @@ body.fade-in {
 
 /* responsive design for mobile */
 @media (max-width: 768px) {
+  .back-select {
+    margin-left: -60px;
+    margin-top: -10px;
+    margin-bottom: 30px;
+    gap: 5px;
+  }
+
   .back-choose {
     font-size: 14px;
   }
@@ -1205,7 +1212,7 @@ body {
 }
 
 .selectpass-back-home {
-  margin-top: -10px;
+  margin-top: -20px;
 }
 
 .booking-layout {
